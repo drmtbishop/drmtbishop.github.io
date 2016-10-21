@@ -430,11 +430,11 @@ th {
 /* LAYOUT STYLES */
 body {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
   color: #666;
-  background: #fafafa url(../images/body-bg.jpg) 0 0 repeat;
+  
 }
 
 p {
@@ -452,7 +452,6 @@ header {
   padding-top: 40px;
   padding-bottom: 40px;
   font-family: Arial, Helvetica, sans-serif;
-  background: #2e7bcf url(../images/tumbleturn_icon.jpg) 0 0 repeat-x;
   border-bottom: solid 1px #275da1;
 }
 
@@ -535,7 +534,7 @@ header a.button {
   position: absolute;
   top: 0;
   right: 0;
-  background: transparent url(../images/github-button.png) 0 0 no-repeat;
+  background: transparent url(../images/tumbleturn_icon.JPG) 0 0 no-repeat;
 }
 aside a.button {
   display: block;
