@@ -612,7 +612,7 @@ form {
 
 /* GENERAL ELEMENT TYPE STYLES */
 
-div.standardPage {
+#standardPage div {
   width:85%; 
   margin:0 auto;
 }
