@@ -535,6 +535,7 @@ header a.button {
   top: 0;
   right: 0;
   background: transparent url(../images/tumbleturn_icon.JPG) 0 0 no-repeat;
+  background-size: contain;
 }
 aside a.button {
   display: block;
