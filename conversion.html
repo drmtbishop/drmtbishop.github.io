@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+  </head>
+  <body style="background-color: #005596; color: #ffffff; font-size: 16px;font-family: Arial, Helvetica, sans-serif" >
+
+<br>
+<h2>25M TO 50M CONVERSION USING ASA TABLE ALGORITHM FROM SPORTSYSTEMS<h2>
+<form name="myForm" method="get"  style="font-size:16px; font-weight:normal;">
+<table style="width:90%;">
+<td>
+<h3> DISTANCE </h3>
+<select style="font-size:16px; width:100;" id="selectedDistance">
+<option value="50">50m</option>
+<option value="100">100m</option>
+<option value="200">200m</option>
+<option value="400">400m</option>
+<option value="800">800m</option>
+<option value="1500">1500m</option>
+</select>
+</td>
+<td>
+<h3> STROKE </h3>
+<select style="font-size:16px" id="selectedStroke">
+<option value="freestyle">Freestyle</option>
+<option value="backstroke">Backstroke</option>
+<option value="breaststroke">Breaststroke</option>
+<option value="butterfly">Butterfly</option>
+<option value="im">IM</option>
+</select>
+</td>
+</table>
+<h3> TIME </h3>
+  <input id="mintime" style="font-size:16px; width:100;" type="number" min="0" max="99" value="0" name="mintime">
+MINUTES<br>
+ <input id="sectime" style="font-size:16px; width:100;" type="number" min="0" max="59" value="0" name="sectime">
+SECONDS<br>
+ <input id="hnthtime" style="font-size:16px; width:100;" type="number" min="0" max="99" value="0" name="hnthtime">
+HUNDREDTHS
+ <br><br>
+  <input type="button" style="font-size:18px" name="convertButton" value="CONVERT TIME" onclick="conversionFn(this.form)"><br><br>
+</form>
+<table style="font-size:22px; font-weight:bold; text-align:center;">
+<tr style="text-align:center;">
+<td>25m TIME </td>
+<td> </td>
+<td>50m TIME </td>
+</tr>
+<tr>
+<td><p id="inputfinal"></p></td>
+<td> >>> </td>
+<td><p id="convertfinal"></p></td>
+</tr>
+</table>
+<script>
+ function conversionFn(form) {
+        var mins25mtime = document.getElementById("mintime");
+        var secs25mtime = document.getElementById("sectime");
+	var hnths25mtime = document.getElementById("hnthtime");
+	var timeAsSeconds = parseInt(secs25mtime.value)+(parseInt(mins25mtime.value)*60)+(parseInt(hnths25mtime.value)*0.01);
+	var distance = document.getElementById("selectedDistance");
+	var stroke = document.getElementById("selectedStroke");
+	var NTF = 0.000;
+	var TF = 0.000;
+	var PoolMeasure = 1.000;
+
+	if (stroke.value == 'freestyle' && distance.value == 50){ NTF += 0.500; TF += 42.245;}
+	else if (stroke.value == 'freestyle' && distance.value == 100){ NTF += 2.000; TF += 42.245;}
+	else if (stroke.value == 'freestyle' && distance.value == 200){ NTF += 8.000; TF += 43.786;}
+	else if (stroke.value == 'freestyle' && distance.value == 400){ NTF += 32.000; TF += 44.233;}
+	else if (stroke.value == 'freestyle' && distance.value == 800){ NTF += 128.000; TF += 45.525;}
+	else if (stroke.value == 'freestyle' && distance.value == 1500){ NTF = 450.000; TF = 46.221;}
+	else if (stroke.value == 'backstroke' && distance.value == 50){ NTF += 0.500; TF += 40.500;}
+	else if (stroke.value == 'backstroke' && distance.value == 100){ NTF += 2.000; TF += 40.500;}
+	else if (stroke.value == 'backstroke' && distance.value == 200){ NTF += 8.000; TF += 41.980;}
+	else if (stroke.value == 'breaststroke' && distance.value == 50){ NTF += 0.500; TF += 63.616;}
+	else if (stroke.value == 'breaststroke' && distance.value == 100){ NTF += 2.000; TF += 63.616;}
+	else if (stroke.value == 'breaststroke' && distance.value == 200){ NTF += 8.000; TF += 66.598;}
+	else if (stroke.value == 'butterfly' && distance.value == 50){ NTF += 0.500; TF += 38.269;}
+	else if (stroke.value == 'butterfly' && distance.value == 100){ NTF += 2.000; TF += 38.269;}
+	else if (stroke.value == 'butterfly' && distance.value == 200){ NTF += 8.000; TF += 39.760;}
+	else if (stroke.value == 'im' && distance.value == 200){ NTF += 8.000; TF += 49.700;}
+	else if (stroke.value == 'im' && distance.value == 400){ NTF += 32.000; TF += 55.366;}
+        else{alert("This distance and stroke combination\ncannot be calculated.\nPlease try again.")}
+	<!--else {NTF += 0; TF += 0;}-->
+
+	var TimeTo25 = parseFloat(timeAsSeconds.valueOf());
+	var TimeTo50 = ((TimeTo25 + (Math.sqrt(TimeTo25 * TimeTo25 + 4 * PoolMeasure * TF * NTF))) / (2 * PoolMeasure));
+	<!--var n = TimeTo50.toFixed(2);-->
+	var decimalTime = Math.round(TimeTo50*10)/10
+        var decimalMins = parseInt(decimalTime / 60);
+	var decimalSecs = parseFloat(decimalTime-(decimalMins*60));
+        var timeoutput = decimalMins+"m"+parseFloat(decimalSecs.valueOf()).toFixed(2);
+	document.getElementById("convertfinal").innerHTML = timeoutput.valueOf();
+        var timeinput = mins25mtime.value+"m"+secs25mtime.value+"."+hnths25mtime.value;
+	document.getElementById("inputfinal").innerHTML = timeinput.valueOf();
+	return false;
+}
+</script>
+
+
+  </body>
+</html>
+
+
