@@ -26,70 +26,43 @@
       </div>
     </header>
 
-<h2>VIEW TOP SWIM TIMES</h2>
-<form name="myForm" action="" >
-<h3>SWIM CLUB</h3>
-   <select name="DB" id="DB" style="color: #000; font-size:16px; width: 200px">
-   <option value="upload%5CHaddingtonDistrictASC.mdb" selected>Haddington ASC</option>
-   <option value="upload%5CTranentASC.mdb" >Tranent ASC</option>
-   <option value="upload%5CMusselburghASC.mdb" >Musselburgh ASC</option>
-   <option value="upload%5CEastLothianSwimTeam.mdb" >East Lothian ST</option>
-   </select>
+<h2>LINKS TO POOL LOCATIONS</h2>
 
-<h3>ID NUMBER</h3>
-<input type="text" name="swimmerid" id="swimmerid" value="1234" style="color: #000; font-size:16px; width:100px">
-<h3>DISTANCE</h3>
-<input type="text" name="distance" id="distance" value="100" style="color: #000; font-size:16px; width:100px">
-<h3>ENTRIES (1=PB)</h3>
-<input type="text" name="list_number" id="list_number" value="1" style="color: #000; font-size:16px; width:100px">
-<h3>POOL LENGTH </h3>
-<span style="font-size:20px">
-<input type="radio" name="poollength" id="poollength" value ="S" style="color: #000; width: 25px; height: 25px;" checked="checked">25M
-<input type="radio" name="poollength" id="poollength" value ="L" style="color: #000; width: 25px; height: 25px;">50M<br>
+<p><a href="https://www.google.co.uk/maps/place/Aberdeen+Sports+Village+-+Aquatics+Centre/@57.1620542,-2.1350113,3799m/data=!3m1!1e3!4m8!1m2!2m1!1sAberdeen+aquatics!3m4!1s0x48840e0de0ec6ac5:0xb2027b7a2531d85f!8m2!3d57.1638031!4d-2.0950078" style="font-size:18px" target="_blank">Aberdeen Aquatics Centre</a> </p>
 
-</span>
+<p><a href="https://www.google.co.uk/maps/place/Xcite+Bathgate/@55.909036,-3.6444977,491m/data=!3m2!1e3!4b1!4m5!3m4!1s0x48887620de13f977:0xf8119f7fa9755470!8m2!3d55.909036!4d-3.642309" style="font-size:18px" target="_blank">Bathgate (Xcite)</a> </p>
 
-<h3>STROKE</h3>
-<input type="button" style="color: #000; font-size:20px; width:200px" value="FLY" name="flyButton" onClick="flyURL()" ><br><br>
-<input type="button" style="color: #000; font-size:20px; width:200px" value="BACK" name="backButton"  onClick="backURL()"><br><br>
-<input type="button" style="color: #000; font-size:20px; width:200px" value="BREAST" name="breastButton"  onClick="breastURL()"><br><br>
-<input type="button" style="color: #000; font-size:20px; width:200px" value="FREE" name="freeButton"  onClick="freeURL()"><br><br>
-<input type="button" style="color: #000; font-size:20px; width:200px" value="IM" name="imButton"  onClick="imURL()"><br><br>
-    
-<h3>ALL PB TIMES FOR SELECTED POOL LENGTH</h3>
-<input type="button" style="color: #000; font-size:20px; width:200px" value="ALL PB" name="allpbsButton"  onClick="allpbsURL()"><br><br>  
-</form>
-<br>
+<p><a href="https://www.google.co.uk/maps/place/Dalkeith+High+School/@55.9014096,-3.0467561,491m/data=!3m1!1e3!4m5!3m4!1s0x4887bbf90420d13d:0xed882ff5333d74ad!8m2!3d55.9014096!4d-3.0445674" style="font-size:18px" target="_blank">Dalkeith</a> </p>
 
-<script  type="text/javascript">
+<p><a href="https://www.google.co.uk/maps/place/Carnegie+Leisure+Centre/@56.0740784,-3.4627309,489m/data=!3m2!1e3!4b1!4m5!3m4!1s0x4887d223a98de801:0xe2dc5ecd5cc79669!8m2!3d56.0740784!4d-3.4605422" style="font-size:18px" target="_blank">Dunfermline (Carnegie)</a> </p>
 
-function flyURL() {
-     window.open
-("http://www.sports-tek.com/TMOnline/aATHRESULTSWithPSMR.ASP?ATH="+document.myForm.swimmerid.value+"&Stroke=4&Distance="+document.myForm.distance.value+"&Course="+document.querySelector('input[name="poollength"]:checked').value+"&Fastest="+document.myForm.list_number.value+"&MEET=&STD=false&DB="+document.myForm.DB.value, "_blank"); 
-}
-function backURL() {
-     window.open
-("http://www.sports-tek.com/TMOnline/aATHRESULTSWithPSMR.ASP?ATH="+document.myForm.swimmerid.value+"&Stroke=2&Distance="+document.myForm.distance.value+"&Course="+document.querySelector('input[name="poollength"]:checked').value+"&Fastest="+document.myForm.list_number.value+"&MEET=&STD=false&DB="+document.myForm.DB.value, "_blank"); 
-}
-function breastURL() {
-     window.open
-("http://www.sports-tek.com/TMOnline/aATHRESULTSWithPSMR.ASP?ATH="+document.myForm.swimmerid.value+"&Stroke=3&Distance="+document.myForm.distance.value+"&Course="+document.querySelector('input[name="poollength"]:checked').value+"&Fastest="+document.myForm.list_number.value+"&MEET=&STD=false&DB="+document.myForm.DB.value, "_blank"); 
-}
-function freeURL() {
-     window.open
-("http://www.sports-tek.com/TMOnline/aATHRESULTSWithPSMR.ASP?ATH="+document.myForm.swimmerid.value+"&Stroke=1&Distance="+document.myForm.distance.value+"&Course="+document.querySelector('input[name="poollength"]:checked').value+"&Fastest="+document.myForm.list_number.value+"&MEET=&STD=false&DB="+document.myForm.DB.value, "_blank"); 
-}
-function imURL() {
-     window.open
-("http://www.sports-tek.com/TMOnline/aATHRESULTSWithPSMR.ASP?ATH="+document.myForm.swimmerid.value+"&Stroke=5&Distance="+document.myForm.distance.value+"&Course="+document.querySelector('input[name="poollength"]:checked').value+"&Fastest="+document.myForm.list_number.value+"&MEET=&STD=false&DB="+document.myForm.DB.value, "_blank"); 
-}
-function allpbsURL() {
-     window.open
-("http://www.sports-tek.com/TMOnline/aATHRESULTSWithPSMR.ASP?ATH="+document.myForm.swimmerid.value+"&Stroke=&Distance="+"&Course="+document.querySelector('input[name="poollength"]:checked').value+"&Fastest=1&MEET=&STD=false&DB="+document.myForm.DB.value, "_blank"); 
-}  
-  
-</script>
 
+
+<p><a href="https://www.google.co.uk/maps/place/Eyemouth+Leisure+Centre/@55.8738925,-2.0954779,491m/data=!3m2!1e3!4b1!4m5!3m4!1s0x4887391ded53b20b:0xc453e564494d7854!8m2!3d55.8738925!4d-2.0932892" style="font-size:18px" target="_blank">Eyemouth</a> </p>
+
+<p><a href="https://www.google.co.uk/maps/place/Michael+Woods+Sports+%26+Leisure+Centre/@56.1842945,-3.1781226,487m/data=!3m2!1e3!4b1!4m5!3m4!1s0x48864a8d4cb80cbd:0x38b5b86b39d9c54d!8m2!3d56.1842945!4d-3.1759339" style="font-size:18px" target="_blank">Glenrothes (Michael Woods)</a> </p>
+
+<p><a href="https://www.google.co.uk/maps/place/Aubigny+Sports+Centre/@55.9518036,-2.7810201,17z/data=!3m1!4b1!4m5!3m4!1s0x4887a6567cc6a6db:0xd4132e49cd537e78!8m2!3d55.9518036!4d-2.7788314" style="font-size:18px" target="_blank">Haddington</a> </p>
+
+
+
+<p><a href="https://www.google.co.uk/maps/place/Musselburgh+Sports+Centre/@55.9390597,-3.05017,17z/data=!3m1!4b1!4m5!3m4!1s0x4887bbd253fd0dd9:0xe7761f5f9fc50ae!8m2!3d55.9390597!4d-3.0479813" style="font-size:18px" target="_blank">Musselburgh</a> </p>
+
+<p><a href="https://www.google.co.uk/maps/place/North+Berwick+Sports+Centre/@56.053131,-2.7221737,17z/data=!3m1!4b1!4m5!3m4!1s0x48870762fc7b8c87:0x1c43c111b8250f60!8m2!3d56.053131!4d-2.719985" style="font-size:18px" target="_blank">North Berwick</a> </p>
+
+<p><a href="https://www.google.co.uk/maps/place/Portobello+Swim+Centre/@55.9533124,-3.1419014,13z/data=!4m8!1m2!2m1!1sswimming+pool+tranent!3m4!1s0x4887b9b018feb733:0xd2c4ac839148734d!8m2!3d55.9533124!4d-3.1068825" style="font-size:18px" target="_blank">Portobello</a> </p>
+
+<p><a href="https://www.google.co.uk/maps/place/Mercat+Gait+Centre/@55.9557312,-2.9764581,17z/data=!3m1!4b1!4m5!3m4!1s0x4887bac2ae08827b:0x55a9d04bdc14e8a4!8m2!3d55.9557312!4d-2.9742694" style="font-size:18px" target="_blank">Prestonpans</a> </p>
+
+<p><a href="https://www.google.co.uk/maps/place/Royal+Commonwealth+Pool/@55.939015,-3.1750147,490m/data=!3m2!1e3!4b1!4m5!3m4!1s0x4887b8807c6df589:0x424cbf8e9a2e8ef7!8m2!3d55.939015!4d-3.172826" style="font-size:18px" target="_blank">Royal Commonwealth Pool, Edinburgh</a> </p>
+
+<p><a href="https://www.google.co.uk/maps/place/Tollcross+International+Swimming+Centre/@55.845737,-4.1795577,492m/data=!3m2!1e3!4b1!4m5!3m4!1s0x4888416d7a967001:0xda701b46eeb71583!8m2!3d55.845737!4d-4.177369" style="font-size:18px" target="_blank">Tollcross International, Glasgow</a> </p>
+
+<p><a href="https://www.google.co.uk/maps/place/Tranent+Loch+Community+Centre/@55.9529797,-3.3870582,10z/data=!4m8!1m2!2m1!1sloch+pool+tranent!3m4!1s0x0000000000000000:0x3a46ef9012991ef1!8m2!3d55.9427113!4d-2.9522324" style="font-size:18px" target="_blank">Tranent</a> </p>
+
+
+
+<p><a href="https://www.google.co.uk/maps/place/Xcite+Whitburn/@55.8656619,-3.6916501,491m/data=!3m2!1e3!4b1!4m5!3m4!1s0x488875cc48a1d07f:0xf7b67e8ed4eb7b48!8m2!3d55.8656619!4d-3.6894614" style="font-size:18px" target="_blank">Whitburn (Xcite)</a></p>
   </body>
 </html>
 
