@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>tumbleturn</title>
+  </head>
+
+  <body style="background-color: #005596; color: #ffffff; font-size: 16px; font-family: Arial, Helvetica, sans-serif" >
+    <header>
+      <div class="inner">
+        <a href="https://drmtbishop.github.io/index.html"><img src="../images/TumbleturnWhite.png" style="float:right" alt="home" height="150" width="150"></a>
+        <h1>tumbleturn</h1>
+        <h2>...for swim times</h2>
+        <!-- <a href="https://drmtbishop.github.io/index.html" class="button"></a> -->
+      </div>
+    </header>
+
+<h2>VIEW TOP SWIM TIMES</h2>
+<form name="myForm" action="" >
+<h3>SWIM CLUB</h3>
+   <select name="DB" id="DB" style="color: #000; font-size:16px; width: 200px">
+   <option value="upload%5CHaddingtonDistrictASC.mdb" selected>Haddington ASC</option>
+   <option value="upload%5CTranentASC.mdb" >Tranent ASC</option>
+   <option value="upload%5CMusselburghASC.mdb" >Musselburgh ASC</option>
+   <option value="upload%5CEastLothianSwimTeam.mdb" >East Lothian ST</option>
+   </select>
+
+<h3>ID NUMBER</h3>
+<input type="text" name="swimmerid" id="swimmerid" value="1234" style="color: #000; font-size:16px; width:100px">
+<h3>DISTANCE</h3>
+<input type="text" name="distance" id="distance" value="100" style="color: #000; font-size:16px; width:100px">
+<h3>ENTRIES (1=PB)</h3>
+<input type="text" name="list_number" id="list_number" value="1" style="color: #000; font-size:16px; width:100px">
+<h3>POOL LENGTH </h3>
+<span style="font-size:20px">
+<input type="radio" name="poollength" id="poollength" value ="S" style="color: #000; width: 25px; height: 25px;" checked="checked">25M
+<input type="radio" name="poollength" id="poollength" value ="L" style="color: #000; width: 25px; height: 25px;">50M<br>
+
+</span>
+
+<h3>STROKE</h3>
+<input type="button" style="color: #000; font-size:20px; width:200px" value="FLY" name="flyButton" onClick="flyURL()" ><br><br>
+<input type="button" style="color: #000; font-size:20px; width:200px" value="BACK" name="backButton"  onClick="backURL()"><br><br>
+<input type="button" style="color: #000; font-size:20px; width:200px" value="BREAST" name="breastButton"  onClick="breastURL()"><br><br>
+<input type="button" style="color: #000; font-size:20px; width:200px" value="FREE" name="freeButton"  onClick="freeURL()"><br><br>
+<input type="button" style="color: #000; font-size:20px; width:200px" value="IM" name="imButton"  onClick="imURL()"><br><br>
+    
+<h3>ALL PB TIMES FOR SELECTED POOL LENGTH</h3>
+<input type="button" style="color: #000; font-size:20px; width:200px" value="ALL PB" name="allpbsButton"  onClick="allpbsURL()"><br><br>  
+</form>
+<br>
+
+<script  type="text/javascript">
+
+function flyURL() {
+     window.open
+("http://www.sports-tek.com/TMOnline/aATHRESULTSWithPSMR.ASP?ATH="+document.myForm.swimmerid.value+"&Stroke=4&Distance="+document.myForm.distance.value+"&Course="+document.querySelector('input[name="poollength"]:checked').value+"&Fastest="+document.myForm.list_number.value+"&MEET=&STD=false&DB="+document.myForm.DB.value, "_blank"); 
+}
+function backURL() {
+     window.open
+("http://www.sports-tek.com/TMOnline/aATHRESULTSWithPSMR.ASP?ATH="+document.myForm.swimmerid.value+"&Stroke=2&Distance="+document.myForm.distance.value+"&Course="+document.querySelector('input[name="poollength"]:checked').value+"&Fastest="+document.myForm.list_number.value+"&MEET=&STD=false&DB="+document.myForm.DB.value, "_blank"); 
+}
+function breastURL() {
+     window.open
+("http://www.sports-tek.com/TMOnline/aATHRESULTSWithPSMR.ASP?ATH="+document.myForm.swimmerid.value+"&Stroke=3&Distance="+document.myForm.distance.value+"&Course="+document.querySelector('input[name="poollength"]:checked').value+"&Fastest="+document.myForm.list_number.value+"&MEET=&STD=false&DB="+document.myForm.DB.value, "_blank"); 
+}
+function freeURL() {
+     window.open
+("http://www.sports-tek.com/TMOnline/aATHRESULTSWithPSMR.ASP?ATH="+document.myForm.swimmerid.value+"&Stroke=1&Distance="+document.myForm.distance.value+"&Course="+document.querySelector('input[name="poollength"]:checked').value+"&Fastest="+document.myForm.list_number.value+"&MEET=&STD=false&DB="+document.myForm.DB.value, "_blank"); 
+}
+function imURL() {
+     window.open
+("http://www.sports-tek.com/TMOnline/aATHRESULTSWithPSMR.ASP?ATH="+document.myForm.swimmerid.value+"&Stroke=5&Distance="+document.myForm.distance.value+"&Course="+document.querySelector('input[name="poollength"]:checked').value+"&Fastest="+document.myForm.list_number.value+"&MEET=&STD=false&DB="+document.myForm.DB.value, "_blank"); 
+}
+function allpbsURL() {
+     window.open
+("http://www.sports-tek.com/TMOnline/aATHRESULTSWithPSMR.ASP?ATH="+document.myForm.swimmerid.value+"&Stroke=&Distance="+"&Course="+document.querySelector('input[name="poollength"]:checked').value+"&Fastest=1&MEET=&STD=false&DB="+document.myForm.DB.value, "_blank"); 
+}  
+  
+</script>
+
+  </body>
+</html>
+
+
