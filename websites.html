@@ -26,70 +26,58 @@
       </div>
     </header>
 
-<h2>VIEW TOP SWIM TIMES</h2>
-<form name="myForm" action="" >
-<h3>SWIM CLUB</h3>
-   <select name="DB" id="DB" style="color: #000; font-size:16px; width: 200px">
-   <option value="upload%5CHaddingtonDistrictASC.mdb" selected>Haddington ASC</option>
-   <option value="upload%5CTranentASC.mdb" >Tranent ASC</option>
-   <option value="upload%5CMusselburghASC.mdb" >Musselburgh ASC</option>
-   <option value="upload%5CEastLothianSwimTeam.mdb" >East Lothian ST</option>
-   </select>
+<h2>WEBSITE LINKS FOR INFORMATION AND NEWS</h2>
+<h2>CLUB SITES</h2>
 
-<h3>ID NUMBER</h3>
-<input type="text" name="swimmerid" id="swimmerid" value="1234" style="color: #000; font-size:16px; width:100px">
-<h3>DISTANCE</h3>
-<input type="text" name="distance" id="distance" value="100" style="color: #000; font-size:16px; width:100px">
-<h3>ENTRIES (1=PB)</h3>
-<input type="text" name="list_number" id="list_number" value="1" style="color: #000; font-size:16px; width:100px">
-<h3>POOL LENGTH </h3>
-<span style="font-size:20px">
-<input type="radio" name="poollength" id="poollength" value ="S" style="color: #000; width: 25px; height: 25px;" checked="checked">25M
-<input type="radio" name="poollength" id="poollength" value ="L" style="color: #000; width: 25px; height: 25px;">50M<br>
 
-</span>
+<table style="width:200px;text-align:right">
+<tbody>
+<tr>
+<td>
+<p><a href="http://www.swimeastlothian.com/" style="font-size:18px" target="_blank"> ELST</a> </p>
+</td>
+<td> </td>
+<td>
+<p><a href="http://www.swimhaddington.co.uk/" style="font-size:16px" target="_blank"> HASC</a> </p>
+</td>
+</tr>
+<tr>
+</tr>
+<tr>
+<td>
+<p><a href="http://www.musselburghmarlins.co.uk/" style="font-size:16px" target="_blank"> MASC</a> </p>
+</td>
+<td>    </td>
+<td>
+<p><a href="http://www.swimtranent.co.uk/" style="font-size:16px" target="_blank"> TASC</a> </p>
+</td>
+</tr>
+</tbody>
+</table>
+<hr width="90%">
+<h2> INFORMATION </h2>
+<p><a href="http://www.fina.org" style="font-size:18px" target="_blank"> FINA</a> </p>
+<p><a href="http://www.swimmingresults.org" style="font-size:18px" target="_blank"> swimmingresults.org</a> </p>
 
-<h3>STROKE</h3>
-<input type="button" style="color: #000; font-size:20px; width:200px" value="FLY" name="flyButton" onClick="flyURL()" ><br><br>
-<input type="button" style="color: #000; font-size:20px; width:200px" value="BACK" name="backButton"  onClick="backURL()"><br><br>
-<input type="button" style="color: #000; font-size:20px; width:200px" value="BREAST" name="breastButton"  onClick="breastURL()"><br><br>
-<input type="button" style="color: #000; font-size:20px; width:200px" value="FREE" name="freeButton"  onClick="freeURL()"><br><br>
-<input type="button" style="color: #000; font-size:20px; width:200px" value="IM" name="imButton"  onClick="imURL()"><br><br>
-    
-<h3>ALL PB TIMES FOR SELECTED POOL LENGTH</h3>
-<input type="button" style="color: #000; font-size:20px; width:200px" value="ALL PB" name="allpbsButton"  onClick="allpbsURL()"><br><br>  
-</form>
-<br>
+<p><a href="http://www.swimming.org/britishswimming" style="font-size:18px" target="_blank"> British Swimming</a> </p>
 
-<script  type="text/javascript">
-
-function flyURL() {
-     window.open
-("http://www.sports-tek.com/TMOnline/aATHRESULTSWithPSMR.ASP?ATH="+document.myForm.swimmerid.value+"&Stroke=4&Distance="+document.myForm.distance.value+"&Course="+document.querySelector('input[name="poollength"]:checked').value+"&Fastest="+document.myForm.list_number.value+"&MEET=&STD=false&DB="+document.myForm.DB.value, "_blank"); 
-}
-function backURL() {
-     window.open
-("http://www.sports-tek.com/TMOnline/aATHRESULTSWithPSMR.ASP?ATH="+document.myForm.swimmerid.value+"&Stroke=2&Distance="+document.myForm.distance.value+"&Course="+document.querySelector('input[name="poollength"]:checked').value+"&Fastest="+document.myForm.list_number.value+"&MEET=&STD=false&DB="+document.myForm.DB.value, "_blank"); 
-}
-function breastURL() {
-     window.open
-("http://www.sports-tek.com/TMOnline/aATHRESULTSWithPSMR.ASP?ATH="+document.myForm.swimmerid.value+"&Stroke=3&Distance="+document.myForm.distance.value+"&Course="+document.querySelector('input[name="poollength"]:checked').value+"&Fastest="+document.myForm.list_number.value+"&MEET=&STD=false&DB="+document.myForm.DB.value, "_blank"); 
-}
-function freeURL() {
-     window.open
-("http://www.sports-tek.com/TMOnline/aATHRESULTSWithPSMR.ASP?ATH="+document.myForm.swimmerid.value+"&Stroke=1&Distance="+document.myForm.distance.value+"&Course="+document.querySelector('input[name="poollength"]:checked').value+"&Fastest="+document.myForm.list_number.value+"&MEET=&STD=false&DB="+document.myForm.DB.value, "_blank"); 
-}
-function imURL() {
-     window.open
-("http://www.sports-tek.com/TMOnline/aATHRESULTSWithPSMR.ASP?ATH="+document.myForm.swimmerid.value+"&Stroke=5&Distance="+document.myForm.distance.value+"&Course="+document.querySelector('input[name="poollength"]:checked').value+"&Fastest="+document.myForm.list_number.value+"&MEET=&STD=false&DB="+document.myForm.DB.value, "_blank"); 
-}
-function allpbsURL() {
-     window.open
-("http://www.sports-tek.com/TMOnline/aATHRESULTSWithPSMR.ASP?ATH="+document.myForm.swimmerid.value+"&Stroke=&Distance="+"&Course="+document.querySelector('input[name="poollength"]:checked').value+"&Fastest=1&MEET=&STD=false&DB="+document.myForm.DB.value, "_blank"); 
-}  
-  
-</script>
-
+<p><a href="http://www.scottishswimming.com/" style="font-size:18px" target="_blank"> Scottish Swimming</a> </p>
+<p><a href="http://www.swimscotland.co.uk/" style="font-size:18px" target="_blank"> Swim Scotland</a> </p>
+<p><a href="http://www.sasaeastdistrict.org.uk/" style="font-size:18px" target="_blank"> SASA East District</a> </p>
+<p><a href="http://www.sasanorth.org.uk/" style="font-size:18px" target="_blank"> SASA North District</a> </p>
+<p><a href="http://www.scotswimwest.co.uk/" style="font-size:18px" target="_blank"> SASA West District</a> </p>
+<p><a href="http://www.sports-tek.com/TMOnline" style="font-size:18px" target="_blank"> Hy-Tek Team Stats</a> </p>
+<p><a href="http://www.active.com/mobile/meet-mobile-app" style="font-size:18px" target="_blank"> Meet Mobile App</a> </p>
+<p><a href="http://www.teamapp.com/" style="font-size:18px" target="_blank"> TeamApp</a> </p>
+<p><a href="http://www.pullbuoy.co.uk/" style="font-size:18px" target="_blank"> Pullbuoy</a> </p>
+<hr width="90%">
+<h2> SHOPPING </h2>
+<p><a href="http://www.proswimwear.co.uk/" style="font-size:18px" target="_blank"> ProSwimwear</a> </p>
+<p><a href="http://www.swimshop.co.uk/" style="font-size:18px" target="_blank"> SwimShop</a> </p>
+<p><a href="http://www.simplyswim.com/" style="font-size:18px" target="_blank"> SimplySwim</a> </p>
+<p><a href="http://www.arenaswimwearstore.com/" style="font-size:18px" target="_blank"> Arena Swimwear</a> </p>
+<p><a href="http://www.speedostore.co.uk/" style="font-size:18px" target="_blank"> Speedo</a> </p>
+<p><a href="http://www.mailsports.co.uk/" style="font-size:18px" target="_blank"> Mailsports</a> </p>
   </body>
 </html>
 
