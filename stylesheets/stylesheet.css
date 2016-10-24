@@ -443,7 +443,8 @@ p {
 }
 
 a {
-  color: #2879d0;
+  color: #c3e1e4;
+
 }
 a:hover {
   color: #2268b2;
@@ -719,6 +720,7 @@ p {
 
 a {
   text-decoration: none;
+  color: #c3e1e4;
 }
 
 p a {
