@@ -33,7 +33,8 @@
 <input type="button" style="font-size:20px; width:200px" value="BACK" name="backButton"  onClick="backURL()"><br><br>
 <input type="button" style="font-size:20px; width:200px" value="BREAST" name="breastButton"  onClick="breastURL()"><br><br>
 <input type="button" style="font-size:20px; width:200px" value="FREE" name="freeButton"  onClick="freeURL()"><br><br>
-<input type="button" style="font-size:20px; width:200px" value="IM" name="imButton"  onClick="imURL()">
+<input type="button" style="font-size:20px; width:200px" value="IM" name="imButton"  onClick="imURL()"><br><br>
+<input type="button" style="font-size:20px; width:200px" value="ALL PB" name="allpbsButton"  onClick="allpbsURL()"><br><br>  
 </form>
 <br>
 
@@ -59,7 +60,11 @@ function imURL() {
      window.open
 ("http://www.sports-tek.com/TMOnline/aATHRESULTSWithPSMR.ASP?ATH="+document.myForm.swimmerid.value+"&Stroke=5&Distance="+document.myForm.distance.value+"&Course="+document.querySelector('input[name="poollength"]:checked').value+"&Fastest="+document.myForm.list_number.value+"&MEET=&STD=false&DB="+document.myForm.DB.value, "_blank"); 
 }
-
+function allpbsURL() {
+     window.open
+("http://www.sports-tek.com/TMOnline/aATHRESULTSWithPSMR.ASP?ATH="+document.myForm.swimmerid.value+"&Stroke=&Distance="+"&Course="+document.querySelector('input[name="poollength"]:checked').value+"&Fastest=1&MEET=&STD=false&DB="+document.myForm.DB.value, "_blank"); 
+}  
+  
 </script>
 
   </body>
