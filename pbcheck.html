@@ -24,85 +24,84 @@
         <h2>...for swim times</h2>
       </div>
     </header>
-<br>
-<h2>CHECK YOUR PB AGAINST CURRENT QT / CT TIMES<h2>
-<form name="myForm" method="get"  style="font-size:20px; font-weight:normal;" action="">
+    <br>
+    <h2>CHECK YOUR PB AGAINST CURRENT QT / CT TIMES<h2>
+    <form name="myForm" method="get"  style="font-size:20px; font-weight:normal;" action="">
 
-<h2> DISTANCE </h2>
-<select style="font-size:20px; width:200px; color: #000;" id="selectedDistance">
-<option value="50">50m</option>
-<option value="100">100m</option>
-<option value="200">200m</option>
-<option value="400">400m</option>
-<option value="800">800m</option>
-<option value="1500">1500m</option>
-</select>
-
-
-<h2> STROKE </h2>
-<select style="font-size:20px; width:200px; color: #000;" id="selectedStroke">
-<option value="freestyle">Freestyle</option>
-<option value="backstroke">Backstroke</option>
-<option value="breaststroke">Breaststroke</option>
-<option value="butterfly">Butterfly</option>
-<option value="im">IM</option>
-</select>
-
-<h2> TIME </h2>
-<input id="mintime" style="font-size:16px; width:100px;" type="number" min="0" max="99" value="" name="mintime">  MINUTES<br>
-<input id="sectime" style="font-size:16px; width:100px;" type="number" min="0" max="59" value="" name="sectime">  SECONDS<br>
-<input id="hnthtime" style="font-size:16px; width:100px;" type="number" min="0" max="99" value="" name="hnthtime">  HUNDREDTHS<br><br>
+        <h2> DISTANCE </h2>
+        <select style="font-size:20px; width:200px; color: #000;" id="selectedDistance">
+            <option value="50">50m</option>
+            <option value="100">100m</option>
+            <option value="200">200m</option>
+            <option value="400">400m</option>
+            <option value="800">800m</option>
+            <option value="1500">1500m</option>
+        </select>
 
 
-<h2> AGE </h2>  
-<select style="font-size:20px; width:200px; color: #000;" id="givenAge">
-<option value="10">10</option>
-<option value="11">11</option>
-<option value="12">12</option>
-<option value="13">13</option>
-<option value="14">14</option>
-<option value="15">15</option>
-<option value="16">16 and over</option>
-</select>
+        <h2> STROKE </h2>
+        <select style="font-size:20px; width:200px; color: #000;" id="selectedStroke">
+            <option value="freestyle">Freestyle</option>
+            <option value="backstroke">Backstroke</option>
+            <option value="breaststroke">Breaststroke</option>
+            <option value="butterfly">Butterfly</option>
+            <option value="im">IM</option>
+        </select>
+
+        <h2> TIME </h2>
+        <input id="mintime" style="font-size:16px; width:100px;" type="number" min="0" max="99" value="" name="mintime">  MINUTES<br>
+        <input id="sectime" style="font-size:16px; width:100px;" type="number" min="0" max="59" value="" name="sectime">  SECONDS<br>
+        <input id="hnthtime" style="font-size:16px; width:100px;" type="number" min="0" max="99" value="" name="hnthtime">  HUNDREDTHS<br><br>
 
 
-<h2> GENDER </h2>
-<select style="font-size:20px; width:200px; color: #000;" id="selectedGender">
-<option value="male">Male</option>
-<option value="female">Female</option>
-</select>
+        <h2> AGE </h2>  
+        <select style="font-size:20px; width:200px; color: #000;" id="givenAge">
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16 and over</option>
+        </select>
 
-<br><br>
-<input type="button" style="font-size:20px; width:200px; color: #000;" name="convertButton" value="CHECK TIME" onclick="checkFn()"><br><br>
 
-<span id="inputPB" style="font-size:20px; color: #000;"></span> --- YOUR PB <br>
-<span id="snagsCT" style="font-size:20px; color: #000;"></span> --- SNAGS CT <br>
-<span id="snagsQT" style="font-size:20px; color: #000;"></span> --- SNAGS QT <br>
-<span id="edagsQT" style="font-size:20px; color: #000;"></span> --- EDAGS QT <br>
-<span id="scotsCT" style="font-size:20px; color: #000;"></span> --- SCOTTISH OPEN CT <br>
-<span id="scotsQT" style="font-size:20px; color: #000;"></span> --- SCOTTISH OPEN QT <br>
-<span id="alertINFO" style="font-size:20px; color: #000;"></span>
+        <h2> GENDER </h2>
+        <select style="font-size:20px; width:200px; color: #000;" id="selectedGender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
 
-</form>
+        <br><br>
+        <input type="button" style="font-size:20px; width:200px; color: #000;" name="convertButton" value="CHECK TIME" onclick="checkFn()"><br><br>
 
-<script  type="text/javascript">
-function checkFn() {
- var mins25mtime = document.getElementById("mintime");
- var secs25mtime = document.getElementById("sectime");
- var hnths25mtime = document.getElementById("hnthtime");
- var timeinput = mins25mtime.value+":"+secs25mtime.value+"."+hnths25mtime.value;
- 
- var distance = document.getElementById("selectedDistance");
- var stroke = document.getElementById("selectedStroke");
- var gender = document.getElementById("selectedGender");
- var age = document.getElementById("givenAge");
- 
- var EDAGS_QT = "(no time)";
- var SNAGS_QT = "(no time)";
- var SNAGS_CT = "(no time)";
- var SCOT_OPEN_QT = "(no time)";
- var SCOT_OPEN_CT = "(no time)";
- var alertNote = "";
+        <span id="inputPB" style="font-size:20px; color: #000;"></span> --- YOUR PB <br>
+        <span id="snagsCT" style="font-size:20px; color: #000;"></span> --- SNAGS CT <br>
+        <span id="snagsQT" style="font-size:20px; color: #000;"></span> --- SNAGS QT <br>
+        <span id="edagsQT" style="font-size:20px; color: #000;"></span> --- EDAGS QT <br>
+        <span id="scotsCT" style="font-size:20px; color: #000;"></span> --- SCOTTISH OPEN CT <br>
+        <span id="scotsQT" style="font-size:20px; color: #000;"></span> --- SCOTTISH OPEN QT <br>
+        <span id="alertINFO" style="font-size:20px; color: #000;"></span>
+
+    </form>
+
+    <script  type="text/javascript">
+        function checkFn() {
+        var mins25mtime = document.getElementById("mintime");
+        var secs25mtime = document.getElementById("sectime");
+        var hnths25mtime = document.getElementById("hnthtime");
+        var timeinput = mins25mtime.value+":"+secs25mtime.value+"."+hnths25mtime.value;
+        var distance = document.getElementById("selectedDistance");
+        var stroke = document.getElementById("selectedStroke");
+        var gender = document.getElementById("selectedGender");
+        var age = document.getElementById("givenAge");
+
+        var EDAGS_QT = "(no time)";
+        var SNAGS_QT = "(no time)";
+        var SNAGS_CT = "(no time)";
+        var SCOT_OPEN_QT = "(no time)";
+        var SCOT_OPEN_CT = "(no time)";
+        var alertNote = "";
  
  if (stroke.value == 'freestyle' && distance.value == 50 && gender.value == 'male' && age.value == 10 ){ EDAGS_QT = '43.00'; SCOT_OPEN_CT = '26.44'; SCOT_OPEN_QT = '25.89';}
  else if (stroke.value == 'freestyle' && distance.value == 100 && gender.value == 'male' && age.value == 10 ){ EDAGS_QT = '1:35.00';SCOT_OPEN_CT = '57.29'; SCOT_OPEN_QT = '56.11';}
@@ -241,7 +240,7 @@ function checkFn() {
  else if (stroke.value == 'im' && distance.value == 200 && gender.value == 'male' && age.value >= 16 ){ EDAGS_QT = '2:32.00';SCOT_OPEN_CT = '2:24.18'; SCOT_OPEN_QT = '2:19.75';}
  else if (stroke.value == 'im' && distance.value == 400 && gender.value == 'male' && age.value >= 16 ){ EDAGS_QT = '5:10.00';SCOT_OPEN_CT = '5:22.47'; SCOT_OPEN_QT = '5:10.08';}
  
-<!-- EDAGS FEMALE -->
+// EDAGS FEMALE
  else if (stroke.value == 'freestyle' && distance.value == 50 && gender.value == 'female' && (age.value == 10 || age.value == 11) ){ EDAGS_QT = '37.00';SCOT_OPEN_CT = '29.25'; SCOT_OPEN_QT = '28.70';}
  else if (stroke.value == 'freestyle' && distance.value == 100 && gender.value == 'female' && (age.value == 10 || age.value == 11) ){ EDAGS_QT = '1:24.00';SCOT_OPEN_CT = '1:03.02'; SCOT_OPEN_QT = '1:01.78';}
  else if (stroke.value == 'freestyle' && distance.value == 200 && gender.value == 'female' && (age.value == 10 || age.value == 11) ){ EDAGS_QT = '2:55.00';SCOT_OPEN_CT = '2:17.74'; SCOT_OPEN_QT = '2:14.71';}
@@ -380,8 +379,8 @@ function checkFn() {
 
  inputPB.innerHTML = timeinput.valueOf();
  edagsQT.innerHTML = EDAGS_QT.valueOf();
- <!-- document.getElementById("inputPB").innerHTML = timeinput.valueOf(); -->
- <!-- document.getElementById("edagsQT").innerHTML = EDAGS_QT.valueOf(); -->
+ // document.getElementById("inputPB").innerHTML = timeinput.valueOf();
+ // document.getElementById("edagsQT").innerHTML = EDAGS_QT.valueOf();
  
  document.getElementById("snagsCT").innerHTML = SNAGS_CT.valueOf(); 
  document.getElementById("snagsQT").innerHTML = SNAGS_QT.valueOf();
@@ -392,7 +391,7 @@ function checkFn() {
 
  return false;
 }
-</script>
+   </script>
 
 
   </body>
