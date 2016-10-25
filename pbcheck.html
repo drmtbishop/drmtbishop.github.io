@@ -16,7 +16,7 @@
     <title>tumbleturn</title>
   </head>
 
-  <body style="background-color: #005596; color: #ffffff; font-size: 16px; font-family: Arial, Helvetica, sans-serif" >
+  <body style="background-color: #005596; color: #ffffff; font-size: 20px; font-family: Arial, Helvetica, sans-serif" >
     <header>
       <div class="inner">
         <a href="https://drmtbishop.github.io/index.html"><img src="../images/TumbleturnWhite.png" style="display:inline-block" alt="home" height="150" width="150"></a>
@@ -26,10 +26,10 @@
     </header>
 <br>
 <h2>CHECK YOUR PB AGAINST CURRENT QT / CT TIMES<h2>
-<form name="myForm" method="get"  style="font-size:16px; font-weight:normal;" action="">
+<form name="myForm" method="get"  style="font-size:20px; font-weight:normal;" action="">
 
-<h3> DISTANCE </h3>
-<select style="font-size:16px; width:100px;" id="selectedDistance">
+<h2> DISTANCE </h2>
+<select style="font-size:20px; width:200px; color: #000;" id="selectedDistance">
 <option value="50">50m</option>
 <option value="100">100m</option>
 <option value="200">200m</option>
@@ -39,8 +39,8 @@
 </select>
 
 
-<h3> STROKE </h3>
-<select style="font-size:16px; width:100px;" id="selectedStroke">
+<h2> STROKE </h2>
+<select style="font-size:20px; width:200px; color: #000;" id="selectedStroke">
 <option value="freestyle">Freestyle</option>
 <option value="backstroke">Backstroke</option>
 <option value="breaststroke">Breaststroke</option>
@@ -48,14 +48,14 @@
 <option value="im">IM</option>
 </select>
 
-<h3> TIME </h3>
+<h2> TIME </h2>
 <input id="mintime" style="font-size:16px; width:100px;" type="number" min="0" max="99" value="" name="mintime">  MINUTES<br>
 <input id="sectime" style="font-size:16px; width:100px;" type="number" min="0" max="59" value="" name="sectime">  SECONDS<br>
 <input id="hnthtime" style="font-size:16px; width:100px;" type="number" min="0" max="99" value="" name="hnthtime">  HUNDREDTHS<br><br>
 
 
-<h3> AGE </h3>  
-<select style="font-size:16px; width:100px;" id="givenAge">
+<h2> AGE </h2>  
+<select style="font-size:20px; width:200px; color: #000;" id="givenAge">
 <option value="10">10</option>
 <option value="11">11</option>
 <option value="12">12</option>
@@ -66,22 +66,22 @@
 </select>
 
 
-<h3> GENDER </h3>
-<select style="font-size:16px; width:100px;" id="selectedGender">
+<h2> GENDER </h2>
+<select style="font-size:20px; width:200px; color: #000;" id="selectedGender">
 <option value="male">Male</option>
 <option value="female">Female</option>
 </select>
 
 <br><br>
-<input type="button" style="font-size:20px" name="convertButton" value="CHECK TIME" onclick="checkFn()"><br><br>
+<input type="button" style="font-size:20px; width:200px; color: #000;" name="convertButton" value="CHECK TIME" onclick="checkFn()"><br><br>
 
-<span id="inputPB" style="font-size:18px;"></span> --- YOUR PB <br>
-<span id="snagsCT" style="font-size:18px;"></span> --- SNAGS CT <br>
-<span id="snagsQT" style="font-size:18px;"></span> --- SNAGS QT <br>
-<span id="edagsQT" style="font-size:18px;"></span> --- EDAGS QT <br>
-<span id="scotsCT" style="font-size:18px;"></span> --- SCOTTISH OPEN CT <br>
-<span id="scotsQT" style="font-size:18px;"></span> --- SCOTTISH OPEN QT <br>
-<span id="alertINFO" style="font-size:18px;"></span>
+<span id="inputPB" style="font-size:20px; color: #000;"></span> --- YOUR PB <br>
+<span id="snagsCT" style="font-size:20px; color: #000;"></span> --- SNAGS CT <br>
+<span id="snagsQT" style="font-size:20px; color: #000;"></span> --- SNAGS QT <br>
+<span id="edagsQT" style="font-size:20px; color: #000;"></span> --- EDAGS QT <br>
+<span id="scotsCT" style="font-size:20px; color: #000;"></span> --- SCOTTISH OPEN CT <br>
+<span id="scotsQT" style="font-size:20px; color: #000;"></span> --- SCOTTISH OPEN QT <br>
+<span id="alertINFO" style="font-size:20px; color: #000;"></span>
 
 </form>
 
