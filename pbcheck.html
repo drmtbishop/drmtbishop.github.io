@@ -27,8 +27,7 @@
 <br>
 <h2>CHECK YOUR PB AGAINST CURRENT QT / CT TIMES<h2>
 <form name="myForm" method="get"  style="font-size:16px; font-weight:normal;" action="">
-<table style="width:90%;">
-<td>
+
 <h3> DISTANCE </h3>
 <select style="font-size:16px; width:100px;" id="selectedDistance">
 <option value="50">50m</option>
@@ -38,8 +37,8 @@
 <option value="800">800m</option>
 <option value="1500">1500m</option>
 </select>
-</td>
-<td>
+
+
 <h3> STROKE </h3>
 <select style="font-size:16px; width:100px;" id="selectedStroke">
 <option value="freestyle">Freestyle</option>
@@ -48,15 +47,13 @@
 <option value="butterfly">Butterfly</option>
 <option value="im">IM</option>
 </select>
-</td>
-</table>
+
 <h3> TIME </h3>
 <input id="mintime" style="font-size:16px; width:100px;" type="number" min="0" max="99" value="" name="mintime">  MINUTES<br>
 <input id="sectime" style="font-size:16px; width:100px;" type="number" min="0" max="59" value="" name="sectime">  SECONDS<br>
 <input id="hnthtime" style="font-size:16px; width:100px;" type="number" min="0" max="99" value="" name="hnthtime">  HUNDREDTHS<br><br>
 
-<table style="width:90%;">
-<td>
+
 <h3> AGE </h3>  
 <select style="font-size:16px; width:100px;" id="givenAge">
 <option value="10">10</option>
@@ -67,15 +64,14 @@
 <option value="15">15</option>
 <option value="16">16 and over</option>
 </select>
-</td>
-<td>
+
+
 <h3> GENDER </h3>
 <select style="font-size:16px; width:100px;" id="selectedGender">
 <option value="male">Male</option>
 <option value="female">Female</option>
 </select>
-</td>
-</table>
+
 <br><br>
 <input type="button" style="font-size:20px" name="convertButton" value="CHECK TIME" onclick="checkFn()"><br><br>
 
@@ -397,7 +393,7 @@ function checkFn() {
  return false;
 }
 </script>
-</div>
+
 
   </body>
 </html>
