@@ -28,8 +28,8 @@
 <br>
 <h2>25M TO 50M CONVERSION USING ASA TABLE ALGORITHM FROM SPORTSYSTEMS<h2>
 <form name="myForm" method="get"  style="font-size:20px; font-weight:normal;">
-<table style="width:90%; border:'0';">
-<td>
+
+
 <h2> DISTANCE </h2>
 <select style="font-size:20px; width:200px;" id="selectedDistance">
 <option value="50">50m</option>
@@ -39,8 +39,8 @@
 <option value="800">800m</option>
 <option value="1500">1500m</option>
 </select>
-</td>
-<td>
+
+
 <h2> STROKE </h2>
 <select style="font-size:20px" id="selectedStroke">
 <option value="freestyle">Freestyle</option>
@@ -49,30 +49,25 @@
 <option value="butterfly">Butterfly</option>
 <option value="im">IM</option>
 </select>
-</td>
-</table>
+
+
 <h2> TIME </h2>
-  <input id="mintime" style="font-size:16px; width:200px;" type="number" min="0" max="99" value="0" name="mintime">
+  <input id="mintime" style="font-size:16px; width:200px; color: #000;" type="number" min="0" max="99" value="0" name="mintime">
 MINUTES<br>
- <input id="sectime" style="font-size:16px; width:200px;" type="number" min="0" max="59" value="0" name="sectime">
+ <input id="sectime" style="font-size:16px; width:200px; color: #000;" type="number" min="0" max="59" value="0" name="sectime">
 SECONDS<br>
- <input id="hnthtime" style="font-size:16px; width:200px;" type="number" min="0" max="99" value="0" name="hnthtime">
+ <input id="hnthtime" style="font-size:16px; width:200px; color: #000;" type="number" min="0" max="99" value="0" name="hnthtime">
 HUNDREDTHS
  <br><br>
   <input type="button" style="font-size:20px; color: #000; width: 200px;" name="convertButton" value="CONVERT TIME" onclick="conversionFn(this.form)"><br><br>
 </form>
-<table style="font-size:22px; font-weight:bold; text-align:center; width: 50%;">
-<tr style="text-align:center;">
-<td>25m TIME </td>
-<td> </td>
-<td>50m TIME </td>
-</tr>
-<tr>
-<td><p id="inputfinal"></p></td>
-<td> >>> </td>
-<td><p id="convertfinal"></p></td>
-</tr>
-</table>
+	
+<h2>25m TIME</h2> 
+<h3 id="inputfinal"></h3>
+<br>
+<h2>50m TIME </h2> 
+<h3 id="convertfinal"></h3>
+
 <script  type="text/javascript">
  function conversionFn(form) {
         var mins25mtime = document.getElementById("mintime");
