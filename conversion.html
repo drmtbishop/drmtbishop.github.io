@@ -42,7 +42,7 @@
 
 
 <h2> STROKE </h2>
-<select style="font-size:20px" id="selectedStroke">
+<select style="font-size:20px; width:200px;" id="selectedStroke">
 <option value="freestyle">Freestyle</option>
 <option value="backstroke">Backstroke</option>
 <option value="breaststroke">Breaststroke</option>
@@ -52,21 +52,21 @@
 
 
 <h2> TIME </h2>
-  <input id="mintime" style="font-size:16px; width:200px; color: #000;" type="number" min="0" max="99" value="0" name="mintime">
+  <input id="mintime" style="font-size:20px; width:200px; color: #000;" type="number" min="0" max="99" value="0" name="mintime">
 MINUTES<br>
- <input id="sectime" style="font-size:16px; width:200px; color: #000;" type="number" min="0" max="59" value="0" name="sectime">
+ <input id="sectime" style="font-size:20px; width:200px; color: #000;" type="number" min="0" max="59" value="0" name="sectime">
 SECONDS<br>
- <input id="hnthtime" style="font-size:16px; width:200px; color: #000;" type="number" min="0" max="99" value="0" name="hnthtime">
+ <input id="hnthtime" style="font-size:20px; width:200px; color: #000;" type="number" min="0" max="99" value="0" name="hnthtime">
 HUNDREDTHS
  <br><br>
   <input type="button" style="font-size:20px; color: #000; width: 200px;" name="convertButton" value="CONVERT TIME" onclick="conversionFn(this.form)"><br><br>
 </form>
 	
-<h2>25m TIME</h2> 
-<h3 id="inputfinal"></h3>
+<h2> 25m TIME</h2> 
+<h2 id="inputfinal"></h2>
 <br>
-<h2>50m TIME </h2> 
-<h3 id="convertfinal"></h3>
+<h2> 50m TIME </h2> 
+<h2 id="convertfinal"></h2>
 
 <script  type="text/javascript">
  function conversionFn(form) {
