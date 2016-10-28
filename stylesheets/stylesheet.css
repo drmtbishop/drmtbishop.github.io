@@ -294,6 +294,14 @@ input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button; /* 2 */
   cursor: pointer; /* 3 */
+  white-space: normal; 
+  width: 250px; 
+  height: 75px; 
+  font-size: 20px; 
+  color: #FFF; 
+  border: 3px solid white; 
+  border-radius: 5px; 
+  background-color: #005596;"
 }
 
 /**
