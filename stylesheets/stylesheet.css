@@ -289,8 +289,9 @@ select {
  */
 
 button,
-/*html body */
-input[type="button"] {
+html input[type="button"] ,/* 1 */
+/*
+{
   -webkit-appearance: button;
   cursor: pointer;
   color: #FFF;
@@ -301,7 +302,7 @@ input[type="button"] {
   white-space: normal; 
   width: 200px; 
   height: 75px;    
-},/* 1 */
+}*/
 
 input[type="reset"],
 input[type="submit"] {
