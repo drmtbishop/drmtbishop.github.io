@@ -49,11 +49,11 @@
         </span>
 
         <h2>STROKE</h2>
-        <input type="button" style="color: #000; font-size:20px; width:200px" value="FLY" name="flyButton" onClick="flyURL()" ><br><br>
-        <input type="button" style="color: #000; font-size:20px; width:200px" value="BACK" name="backButton"  onClick="backURL()"><br><br>
-        <input type="button" style="color: #000; font-size:20px; width:200px" value="BREAST" name="breastButton"  onClick="breastURL()"><br><br>
-        <input type="button" style="color: #000; font-size:20px; width:200px" value="FREE" name="freeButton"  onClick="freeURL()"><br><br>
-        <input type="button" style="color: #000; font-size:20px; width:200px" value="IM" name="imButton"  onClick="imURL()"><br><br>
+        <input type="button" style="color: #FFF; font-size:20px; width:200px" value="FLY" name="flyButton" onClick="flyURL()" ><br><br>
+        <input type="button" style="color: #FFF; font-size:20px; width:200px" value="BACK" name="backButton"  onClick="backURL()"><br><br>
+        <input type="button" style="color: #FFF; font-size:20px; width:200px" value="BREAST" name="breastButton"  onClick="breastURL()"><br><br>
+        <input type="button" style="color: #FFF; font-size:20px; width:200px" value="FREE" name="freeButton"  onClick="freeURL()"><br><br>
+        <input type="button" style="color: #FFF; font-size:20px; width:200px" value="IM" name="imButton"  onClick="imURL()"><br><br>
     
         <h2>ALL PB TIMES FOR SELECTED POOL LENGTH</h2>
         <input type="button" style="color: #000; font-size:20px; width:200px" value="ALL PB" name="allpbsButton"  onClick="allpbsURL()"><br><br>  
@@ -64,28 +64,28 @@
 
         function flyURL() {
             window.open
-("http://www.sports-tek.com/TMOnline/aATHRESULTSWithPSMR.ASP?ATH="+document.myForm.swimmerid.value+"&Stroke=4&Distance="+document.myForm.distance.value+"&Course="+document.querySelector('input[name="poollength"]:checked').value+"&Fastest="+document.myForm.list_number.value+"&MEET=&STD=false&DB="+document.myForm.DB.value, "_blank"); 
-}
+            ("http://www.sports-tek.com/TMOnline/aATHRESULTSWithPSMR.ASP?ATH="+document.myForm.swimmerid.value+"&Stroke=4&Distance="+document.myForm.distance.value+"&Course="+document.querySelector('input[name="poollength"]:checked').value+"&Fastest="+document.myForm.list_number.value+"&MEET=&STD=false&DB="+document.myForm.DB.value, "_blank"); 
+            }
         function backURL() {
             window.open
-("http://www.sports-tek.com/TMOnline/aATHRESULTSWithPSMR.ASP?ATH="+document.myForm.swimmerid.value+"&Stroke=2&Distance="+document.myForm.distance.value+"&Course="+document.querySelector('input[name="poollength"]:checked').value+"&Fastest="+document.myForm.list_number.value+"&MEET=&STD=false&DB="+document.myForm.DB.value, "_blank"); 
-}
+            ("http://www.sports-tek.com/TMOnline/aATHRESULTSWithPSMR.ASP?ATH="+document.myForm.swimmerid.value+"&Stroke=2&Distance="+document.myForm.distance.value+"&Course="+document.querySelector('input[name="poollength"]:checked').value+"&Fastest="+document.myForm.list_number.value+"&MEET=&STD=false&DB="+document.myForm.DB.value, "_blank"); 
+            }
         function breastURL() {
             window.open
-("http://www.sports-tek.com/TMOnline/aATHRESULTSWithPSMR.ASP?ATH="+document.myForm.swimmerid.value+"&Stroke=3&Distance="+document.myForm.distance.value+"&Course="+document.querySelector('input[name="poollength"]:checked').value+"&Fastest="+document.myForm.list_number.value+"&MEET=&STD=false&DB="+document.myForm.DB.value, "_blank"); 
-}
+            ("http://www.sports-tek.com/TMOnline/aATHRESULTSWithPSMR.ASP?ATH="+document.myForm.swimmerid.value+"&Stroke=3&Distance="+document.myForm.distance.value+"&Course="+document.querySelector('input[name="poollength"]:checked').value+"&Fastest="+document.myForm.list_number.value+"&MEET=&STD=false&DB="+document.myForm.DB.value, "_blank"); 
+            }
         function freeURL() {
             window.open
-("http://www.sports-tek.com/TMOnline/aATHRESULTSWithPSMR.ASP?ATH="+document.myForm.swimmerid.value+"&Stroke=1&Distance="+document.myForm.distance.value+"&Course="+document.querySelector('input[name="poollength"]:checked').value+"&Fastest="+document.myForm.list_number.value+"&MEET=&STD=false&DB="+document.myForm.DB.value, "_blank"); 
-}
+            ("http://www.sports-tek.com/TMOnline/aATHRESULTSWithPSMR.ASP?ATH="+document.myForm.swimmerid.value+"&Stroke=1&Distance="+document.myForm.distance.value+"&Course="+document.querySelector('input[name="poollength"]:checked').value+"&Fastest="+document.myForm.list_number.value+"&MEET=&STD=false&DB="+document.myForm.DB.value, "_blank"); 
+            }
         function imURL() {
             window.open
-("http://www.sports-tek.com/TMOnline/aATHRESULTSWithPSMR.ASP?ATH="+document.myForm.swimmerid.value+"&Stroke=5&Distance="+document.myForm.distance.value+"&Course="+document.querySelector('input[name="poollength"]:checked').value+"&Fastest="+document.myForm.list_number.value+"&MEET=&STD=false&DB="+document.myForm.DB.value, "_blank"); 
-}
+            ("http://www.sports-tek.com/TMOnline/aATHRESULTSWithPSMR.ASP?ATH="+document.myForm.swimmerid.value+"&Stroke=5&Distance="+document.myForm.distance.value+"&Course="+document.querySelector('input[name="poollength"]:checked').value+"&Fastest="+document.myForm.list_number.value+"&MEET=&STD=false&DB="+document.myForm.DB.value, "_blank"); 
+            }
         function allpbsURL() {
             window.open
-("http://www.sports-tek.com/TMOnline/aATHRESULTSWithPSMR.ASP?ATH="+document.myForm.swimmerid.value+"&Stroke=&Distance="+"&Course="+document.querySelector('input[name="poollength"]:checked').value+"&Fastest=1&MEET=&STD=false&DB="+document.myForm.DB.value, "_blank"); 
-}  
+            ("http://www.sports-tek.com/TMOnline/aATHRESULTSWithPSMR.ASP?ATH="+document.myForm.swimmerid.value+"&Stroke=&Distance="+"&Course="+document.querySelector('input[name="poollength"]:checked').value+"&Fastest=1&MEET=&STD=false&DB="+document.myForm.DB.value, "_blank"); 
+            }  
   
     </script>
 
