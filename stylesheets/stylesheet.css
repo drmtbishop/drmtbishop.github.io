@@ -289,7 +289,17 @@ select {
  */
 
 button,
-html input[type="button"], /* 1 */
+html input[type="button"]{
+  color: #FFF;
+  font-size: 20px;
+  background-color: #005596;
+  border-radius: 5px;
+  border: 3px solid #FFF;
+  white-space: normal; 
+  width: 200px; 
+  height: 75px;    
+}, /* 1 */
+
 input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button; /* 2 */
@@ -299,7 +309,7 @@ input[type="submit"] {
   height: 75px; 
   font-size: 20px; 
   color: #FFF; 
-  border: 3px solid white; 
+  border: 3px solid #FFF; 
   border-radius: 5px; 
   background-color: #005596;"
 }
