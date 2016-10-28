@@ -289,7 +289,9 @@ select {
  */
 
 button,
-html input[type="button"]{
+html input[type="button"],/* 1 */
+/*
+{
   color: #FFF;
   font-size: 20px;
   background-color: #005596;
@@ -298,7 +300,7 @@ html input[type="button"]{
   white-space: normal; 
   width: 200px; 
   height: 75px;    
-}, /* 1 */
+},  */
 
 input[type="reset"],
 input[type="submit"] {
