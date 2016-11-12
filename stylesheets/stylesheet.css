@@ -19,6 +19,7 @@ html {
 body {
   margin: 0 20px 0 20px;
   background-color: #005596;
+  background-image: url(../images/IMG_4884.JPG);
 }
 
 /* HTML5 display definitions
@@ -912,4 +913,3 @@ footer a:hover {
 
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 @media only screen and (max-width: 479px) { }
-
