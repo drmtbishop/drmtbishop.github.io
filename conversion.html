@@ -97,12 +97,12 @@ HUNDREDTHS
 	else if (stroke.value == 'im' && distance.value == 200){ NTF += 8.000; TF += 49.700;}
 	else if (stroke.value == 'im' && distance.value == 400){ NTF += 32.000; TF += 55.366;}
         else{alert("This distance and stroke combination\ncannot be calculated.\nPlease try again.")}
-	<!--else {NTF += 0; TF += 0;}-->
+	
 
 	var TimeTo25 = parseFloat(timeAsSeconds.valueOf());
 	var TimeTo50 = ((TimeTo25 + (Math.sqrt(TimeTo25 * TimeTo25 + 4 * PoolMeasure * TF * NTF))) / (2 * PoolMeasure));
-	<!--var n = TimeTo50.toFixed(2);-->
-	var decimalTime = Math.round(TimeTo50*10)/10
+	
+	var decimalTime = Math.round(TimeTo50*10)/10;
         var decimalMins = parseInt(decimalTime / 60);
 	var decimalSecs = parseFloat(decimalTime-(decimalMins*60));
         var timeoutput = decimalMins+"m"+parseFloat(decimalSecs.valueOf()).toFixed(2);
@@ -110,7 +110,7 @@ HUNDREDTHS
         var timeinput = mins25mtime.value+"m"+secs25mtime.value+"."+hnths25mtime.value;
 	document.getElementById("inputfinal").innerHTML = timeinput.valueOf();
 	return false;
-}
+	}
 </script>
 
 
