@@ -404,7 +404,7 @@ SELECT A SWIMMER USING THE CLUB NAME AND CLUB ID NUMBER</h2>
     
         </select>
         
-        <input type="text" name="swimmerid" id="swimmerid" value="1234" style="color: #000; font-size:20px; width:200px">
+        <!--<input type="text" name="swimmerid" id="swimmerid" value="1234" style="color: #000; font-size:20px; width:200px">-->
         <h2>DISTANCE</h2>
         <input type="text" name="distance" id="distance" value="100" style="color: #000; font-size:20px; width:200px">
         <h2>ENTRIES (1=PB)</h2>
@@ -432,7 +432,7 @@ SELECT A SWIMMER USING THE CLUB NAME AND CLUB ID NUMBER</h2>
 
         function flyURL() {
             window.open
-            ("http://www.sports-tek.com/TMOnline/aATHRESULTSWithPSMR.ASP?ATH="+document.myForm.swimmerid.value+"&Stroke=4&Distance="+document.myForm.distance.value+"&Course="+document.querySelector('input[name="poollength"]:checked').value+"&Fastest="+document.myForm.list_number.value+"&MEET=&STD=false&DB="+document.myForm.DB.value, "_blank"); 
+            ("http://www.sports-tek.com/TMOnline/aATHRESULTSWithPSMR.ASP?ATH="+document.myForm.mySelectID.value+"&Stroke=4&Distance="+document.myForm.distance.value+"&Course="+document.querySelector('input[name="poollength"]:checked').value+"&Fastest="+document.myForm.list_number.value+"&MEET=&STD=false&DB="+document.myForm.DB.value, "_blank"); 
             }
         function backURL() {
             window.open
