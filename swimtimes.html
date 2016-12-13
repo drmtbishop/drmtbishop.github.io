@@ -38,8 +38,9 @@ SELECT A SWIMMER USING THE CLUB NAME AND CLUB ID NUMBER</h2>
       
             </select>
 
-        <h2>HASC SWIMMERS</h2>
-                <select name="mySelectNAME" id="mySelectID" style="font-size:20px; color: #000; width: 250px;">
+        <h2>SWIMMER FROM CLUB ABOVE</h2>
+                <select name="mySelectNAME" id="mySelectID" style="font-size:20px; color: #000; width: 250px;" >
+				<optgroup label="HASC">
       <option value=99999>Sorted by Surname</option>      
       <option value=2119>Isobel Adams (HASC)</option>      
       <option value=2032>Lauren Aitchison (HASC)</option>      
@@ -178,10 +179,10 @@ SELECT A SWIMMER USING THE CLUB NAME AND CLUB ID NUMBER</h2>
       <option value=2144>Angus Wright (HASC)</option>      
       <option value=2199>Innes Wright (HASC)</option>                
       <option value=2180>Nathan Young (HASC)</option>          
-        </select>
-        <h2>MASC SWIMMERS</h2>
-               <select name="mySelectNAME" id="mySelectID" style="font-size:20px; color: #000; width: 250px;">
-            <option value=99999>Sorted by Surname</option>          
+        </optgroup>
+      
+	  <optgroup label="MASC">
+                       
       <option value=775>Isla Anderson (MASC)</option>           
       <option value=905>Brodie Armstrong (MASC)</option>      
       <option value=824>Eilidh Armstrong (MASC)</option>           
@@ -269,11 +270,10 @@ SELECT A SWIMMER USING THE CLUB NAME AND CLUB ID NUMBER</h2>
       <option value=807>Iona Wilson (MASC)</option>           
       <option value=772>Abby Wright (MASC)</option>            
       <option value=912>Alexander Yuill (MASC)</option>      
-        </select> 
+        </optgroup> 
         
-        <h2>TASC SWIMMERS</h2>
-                <select name="mySelectNAME" id="mySelectID" style="font-size:20px; color: #000; width: 250px;" >
-      <option value=99999>Sorted by Surname</option>       
+        <optgroup label="TASC">
+     
       <option value=2318>Kiera Anderson (TASC)</option>      
       <option value=174>Mitchell Anderson (TASC)</option>           
       <option value=2300>Katie Anderton (TASC)</option>      
@@ -358,10 +358,10 @@ SELECT A SWIMMER USING THE CLUB NAME AND CLUB ID NUMBER</h2>
       <option value=2325>Bruce Weatherhead (TASC)</option>      
       <option value=2263>Rachel White (TASC)</option>          
       <option value=2357>Charlotte Wright (TASC)</option>        
-        </select>
-        <h2>ELST SWIMMERS</h2>
-                <select name="mySelectNAME" id="mySelectID" style="font-size:20px; color: #000; width: 250px;" >
-      <option value=99999>Sorted by Surname</option>           
+        </optgroup>
+		
+        <optgroup label="ELST">
+        
       <option value=558>Edward Alsop (ELST)</option>           
       <option value=1>Mitchell Anderson (ELST)</option>           
       <option value=2>Anna Balfour (ELST)</option>          
@@ -401,7 +401,7 @@ SELECT A SWIMMER USING THE CLUB NAME AND CLUB ID NUMBER</h2>
       <option value=568>Katie Walker (ELST)</option>         
       <option value=28>Megan Watt (ELST)</option>         
       <option value=557>Iona Wilson (ELST)</option>      
-    
+		</optgroup>
         </select>
         
         <!--<input type="text" name="swimmerid" id="swimmerid" value="1234" style="color: #000; font-size:20px; width:200px">-->
@@ -436,28 +436,30 @@ SELECT A SWIMMER USING THE CLUB NAME AND CLUB ID NUMBER</h2>
             }
         function backURL() {
             window.open
-            ("http://www.sports-tek.com/TMOnline/aATHRESULTSWithPSMR.ASP?ATH="+document.myForm.swimmerid.value+"&Stroke=2&Distance="+document.myForm.distance.value+"&Course="+document.querySelector('input[name="poollength"]:checked').value+"&Fastest="+document.myForm.list_number.value+"&MEET=&STD=false&DB="+document.myForm.DB.value, "_blank"); 
+            ("http://www.sports-tek.com/TMOnline/aATHRESULTSWithPSMR.ASP?ATH="+document.myForm.mySelectID.value+"&Stroke=2&Distance="+document.myForm.distance.value+"&Course="+document.querySelector('input[name="poollength"]:checked').value+"&Fastest="+document.myForm.list_number.value+"&MEET=&STD=false&DB="+document.myForm.DB.value, "_blank"); 
             }
         function breastURL() {
             window.open
-            ("http://www.sports-tek.com/TMOnline/aATHRESULTSWithPSMR.ASP?ATH="+document.myForm.swimmerid.value+"&Stroke=3&Distance="+document.myForm.distance.value+"&Course="+document.querySelector('input[name="poollength"]:checked').value+"&Fastest="+document.myForm.list_number.value+"&MEET=&STD=false&DB="+document.myForm.DB.value, "_blank"); 
+            ("http://www.sports-tek.com/TMOnline/aATHRESULTSWithPSMR.ASP?ATH="+document.myForm.mySelectID.value+"&Stroke=3&Distance="+document.myForm.distance.value+"&Course="+document.querySelector('input[name="poollength"]:checked').value+"&Fastest="+document.myForm.list_number.value+"&MEET=&STD=false&DB="+document.myForm.DB.value, "_blank"); 
             }
         function freeURL() {
             window.open
-            ("http://www.sports-tek.com/TMOnline/aATHRESULTSWithPSMR.ASP?ATH="+document.myForm.swimmerid.value+"&Stroke=1&Distance="+document.myForm.distance.value+"&Course="+document.querySelector('input[name="poollength"]:checked').value+"&Fastest="+document.myForm.list_number.value+"&MEET=&STD=false&DB="+document.myForm.DB.value, "_blank"); 
+            ("http://www.sports-tek.com/TMOnline/aATHRESULTSWithPSMR.ASP?ATH="+document.myForm.mySelectID.value+"&Stroke=1&Distance="+document.myForm.distance.value+"&Course="+document.querySelector('input[name="poollength"]:checked').value+"&Fastest="+document.myForm.list_number.value+"&MEET=&STD=false&DB="+document.myForm.DB.value, "_blank"); 
             }
         function imURL() {
             window.open
-            ("http://www.sports-tek.com/TMOnline/aATHRESULTSWithPSMR.ASP?ATH="+document.myForm.swimmerid.value+"&Stroke=5&Distance="+document.myForm.distance.value+"&Course="+document.querySelector('input[name="poollength"]:checked').value+"&Fastest="+document.myForm.list_number.value+"&MEET=&STD=false&DB="+document.myForm.DB.value, "_blank"); 
+            ("http://www.sports-tek.com/TMOnline/aATHRESULTSWithPSMR.ASP?ATH="+document.myForm.mySelectID.value+"&Stroke=5&Distance="+document.myForm.distance.value+"&Course="+document.querySelector('input[name="poollength"]:checked').value+"&Fastest="+document.myForm.list_number.value+"&MEET=&STD=false&DB="+document.myForm.DB.value, "_blank"); 
             }
         function allpbsURL() {
             window.open
-            ("http://www.sports-tek.com/TMOnline/aATHRESULTSWithPSMR.ASP?ATH="+document.myForm.swimmerid.value+"&Stroke=&Distance="+"&Course="+document.querySelector('input[name="poollength"]:checked').value+"&Fastest=1&MEET=&STD=false&DB="+document.myForm.DB.value, "_blank"); 
+            ("http://www.sports-tek.com/TMOnline/aATHRESULTSWithPSMR.ASP?ATH="+document.myForm.mySelectID.value+"&Stroke=&Distance="+"&Course="+document.querySelector('input[name="poollength"]:checked').value+"&Fastest=1&MEET=&STD=false&DB="+document.myForm.DB.value, "_blank"); 
             }  
   
     </script>
 
    </body>
 </html>
+
+
 
 
