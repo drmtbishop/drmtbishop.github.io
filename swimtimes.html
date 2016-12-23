@@ -9,10 +9,6 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
 
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
     <title>tumbleturn</title>
   </head>
 
@@ -25,23 +21,387 @@
       </div>
     </header>
 
-<h2>VIEW PERSONAL BEST SWIM TIMES BY STROKE AND DISTANCE<br>
-SELECT A SWIMMER USING THE CLUB NAME AND CLUB ID NUMBER</h2>
+<h2>VIEW PERSONAL BEST SWIM TIMES BY STROKE AND DISTANCE</h2>
     <form name="myForm" action="" >
-        <h2>SWIM CLUB</h2>
-            <select name="DB" id="DB" style="color: #000; font-size:20px; width: 200px">
-                <option value="upload%5CEastLothianSwimTeam.mdb" >East Lothian ST</option>
-                <option value="upload%5CHaddingtonDistrictASC.mdb" selected>Haddington ASC</option>
-                <option value="upload%5CMusselburghASC.mdb" >Musselburgh ASC</option>
-                <!-- <option value="upload%5CPortobelloASC.mdb" >Portobello ASC</option> -->
-                <option value="upload%5CTranentASC.mdb" >Tranent ASC</option>                
+	
+        <h2>SELECT SWIMMER FROM CLUB</h2>
+                <select name="mySelectID" id="mySelectID" style="font-size:20px; color: #000; width: 250px;" onchange="find(getElementById('mySelectID').value,getElementById('mySelectID').selectedIndex)" >
+				<optgroup label="HaddingtonDistrictASC">
+      <option value=99999>Sorted: Club/Surname</option>      
+      <option value=2119>Isobel Adams (HASC)</option>      
+      <option value=2032>Lauren Aitchison (HASC)</option>      
+      <option value=2130>Edward Alsop (HASC )</option>      
+      <option value=2131>Oliver Alsop (HASC)</option>           
+      <option value=1884>Sarah Anderson (HASC)</option>                    
+      <option value=2128>Aidan Ballantyne (HASC)</option>      
+      <option value=1998>Lucy Ballantyne (HASC)</option>                
+      <option value=2150>Ailsa Benson (HASC)</option>      
+      <option value=2246>Ellie Bent (HASC)</option>      
+      <option value=2034>Harry Bent (HASC)</option>      
+      <option value=2183>Issy Berwick (HASC)</option>      
+      <option value=1829>Rosie Berwick (HASC)</option>           
+      <option value=2191>Felix Bishop (HASC)</option>      
+      <option value=2122>Isabella Bishop (HASC)</option>           
+      <option value=2166>Lucia Bivar Segurado (HASC)</option>      
+      <option value=2240>Tegan Black (HASC)</option>      
+      <option value=2230>Anna Blair (HASC)</option>      
+      <option value=1995>Mia Blair (HASC)</option>           
+      <option value=2215>Dylan Bleakley (HASC)</option>      
+      <option value=2216>Hannah Bleakley (HASC)</option>      
+      <option value=2214>Sarah Bleakley (HASC)</option>           
+      <option value=2226>Asher Borthwick (HASC)</option>      
+      <option value=2227>Katherine Borthwick (HASC)</option>      
+      <option value=2124>Joe Bratko-Dickson (HASC)</option>      
+      <option value=1968>Abbi Brindley (HASC)</option>          
+      <option value=2239>Flynn Bronsdon (HASC)</option>      
+      <option value=2136>Holly Brown (HASC)</option>           
+      <option value=2244>Jude Burley (HASC)</option>           
+      <option value=2238>Ruby Callachan (HASC)</option>      
+      <option value=2221>Glen Cameron (HASC)</option>      
+      <option value=1994>Holly Cameron (HASC)</option>      
+      <option value=2060>Robyn Cameron (HASC)</option>            
+      <option value=2179>Maddy Chapman (HASC )</option>      
+      <option value=1278>Anna Cheyne (HASC)</option>      
+      <option value=2101>Lauren Clark (HASC)</option>           
+      <option value=2237>Emily Collins (HASC)</option>           
+      <option value=2241>Georgia Cowan (HASC)</option>      
+      <option value=2176>Eve Craigmile (HASC)</option>      
+      <option value=2175>Sean Craigmile (HASC)</option>           
+      <option value=2245>Imogen Dale (HASC)</option>      
+      <option value=2016>Julia Dale (HASC)</option>         
+      <option value=2066>Gemma Darling (HASC)</option>           
+      <option value=2197>Amelia Davison (HASC)</option>      
+      <option value=1934>Angus De Burgh (HASC)</option>         
+      <option value=2170>Fiona Dickson (HASC)</option>          
+      <option value=2234>Andrew Donohoe (HASC)</option>      
+      <option value=2208>Callum Donohoe (HASC)</option>          
+      <option value=2143>Sonny Douglas (HASC)</option>      
+      <option value=834>Rebecca Downie (MASC)</option>          
+      <option value=2164>Evie Drysdale (HASC)</option>           
+      <option value=2247>Jude Dunbar (HASC)</option>      
+      <option value=1988>Alexandra Easson (HASC)</option>      
+      <option value=2181>Amy Easson (HASC)</option>      
+      <option value=2182>Clara Easson (HASC)</option>          
+      <option value=2068>Christy Fairgrieve (HASC)</option>          
+      <option value=2219>William Fincham (HASC)</option>           
+      <option value=2158>Oliver Forbes (HASC)</option>          
+      <option value=1891>Matthew Fox (HASC)</option>           
+      <option value=2125>Maya Gent (HASC)</option>      
+      <option value=2160>Grace Gilhooly (HASC)</option>      
+      <option value=2192>Lotte Gilhooly (HASC)</option>      
+      <option value=2000>Iain Goldie (HASC)</option>      
+      <option value=2047>Stuart Goldie (HASC)</option>      
+      <option value=2035>Charlotte Gray (HASC)</option>      
+      <option value=1282>George Green (HASC)</option>      
+      <option value=638>Hannah Green (HASC)</option>         
+      <option value=2220>Erin Gunn (HASC)</option>        
+      <option value=2174>Emma Guy (HASC)</option>      
+      <option value=2142>Thomas Guy (HASC)</option>      
+      <option value=2200>W. Hamel-Shillinglaw (HASC)</option>          
+      <option value=1292>Brigid Hay (HASC)</option>      
+      <option value=2222>Shane Hay (HASC)</option>         
+      <option value=2207>Sasha Hockey (HASC)</option>          
+      <option value=2224>Beth Horsburgh (HASC)</option>      
+      <option value=1964>Matthew Horsburgh (HASC)</option>          
+      <option value=2195>Martin Imrie (HASC)</option>          
+      <option value=2171>Jack Kittle (HASC)</option>              
+      <option value=2163>Lauren Lee (HASC)</option>           
+      <option value=1810>Anna Lissaman (HASC)</option>      
+      <option value=666>Eve Lissaman (HASC)</option>           
+      <option value=1946>Lucy Lucas (HASC)</option>                
+      <option value=2231>Georgia Lyall (HASC)</option>      
+      <option value=2213>Molly Maclean (HASC)</option>      
+      <option value=2129>Owen Malcom (HASC)</option>          
+      <option value=2190>Ellis Marriot (HASC)</option>          
+      <option value=1985>Eve McBain (HASC)</option>           
+      <option value=2223>Maisie McCarthy (HASC)</option>          
+      <option value=2225>Michael McDermott (HASC)</option>      
+      <option value=2107>Emma McGavigan (HASC)</option>      
+      <option value=1285>Tom McGavigan (HASC)</option>      
+      <option value=1296>Conal McGregor (HASC)</option>      
+      <option value=1984>Niamh McInnes (HASC)</option>            
+      <option value=2206>Polly McKinlay (HASC)</option>      
+      <option value=944>Andrew McKnight (HASC)</option>           
+      <option value=2157>Aya Metzger (HASC)</option>      
+      <option value=1826>Taine Middleton (HASC)</option>      
+      <option value=1978>Tavia Middleton (HASC)</option>      
+      <option value=2073>Torri Middleton (HASC)</option>            
+      <option value=2233>Harris Munro (HASC)</option>           
+      <option value=2196>Anna Nairn (HASC)</option>           
+      <option value=2156>Amelie Oakley (HASC)</option>      
+      <option value=625>Robert Ogilvy (HASC)</option>          
+      <option value=2187>Hannah Ormiston (HASC)</option>           
+      <option value=2236>Maya Oswald (HASC)</option>           
+      <option value=1287>Anna Paterson (HASC)</option>      
+      <option value=496>Cory Paterson (HASC)</option>      
+      <option value=2235>Sasha Paterson (HASC)</option>               
+      <option value=2202>Thomas Proudfoot (HASC)</option>           
+      <option value=2189>Finlay Ralston (HASC)</option>          
+      <option value=2194>Finlay Robb (HASC)</option>      
+      <option value=2210>Iona Robb (HASC)</option>          
+      <option value=2117>Faye Rogers (HASC)</option>           
+      <option value=1835>Fraser Samuel (HASC)</option>                 
+      <option value=2242>Abigail Sear (HASC)</option>            
+      <option value=532>Charlie Smith (HASC)</option>           
+      <option value=2055>Morven Stewart (HASC)</option>      
+      <option value=2167>Stella Stewart (HASC)</option>          
+      <option value=2204>Helen Stoddart (HASC)</option>      
+      <option value=2105>Louisa Stoddart (HASC)</option>           
+      <option value=2186>Isla Swinburne (HASC)</option>      
+      <option value=574>Rebecca Swinton (HASC)</option>      
+      <option value=1950>Justin Tait (HASC)</option>      
+      <option value=641>Helen Taylor (HASC)</option>      
+      <option value=1319>Hugh Taylor (HASC)</option>           
+      <option value=1986>Ruth Thomson (HASC)</option>           
+      <option value=2184>Eloise Thursz (HASC)</option>            
+      <option value=2228>Jessicca Underhill (HASC)</option>      
+      <option value=2185>Katie Walker (HASC)</option>           
+      <option value=2243>Gwen Watt (HASC)</option>      
+      <option value=1961>Megan Watt (HASC)</option>          
+      <option value=2168>Ben Williamson (HASC)</option>      
+      <option value=2135>Dannielle Williamson (HASC)</option>      
+      <option value=2232>Leon Williamson (HASC)</option>      
+      <option value=2151>Owen Williamson (HASC)</option>           
+      <option value=2144>Angus Wright (HASC)</option>      
+      <option value=2199>Innes Wright (HASC)</option>                
+      <option value=2180>Nathan Young (HASC)</option>          
+        </optgroup>
       
-            </select>
+	  <optgroup  label="MusselburghASC">
+                       
+      <option value=775>Isla Anderson (MASC)</option>           
+      <option value=905>Brodie Armstrong (MASC)</option>      
+      <option value=824>Eilidh Armstrong (MASC)</option>           
+      <option value=885>Libby Bain (MASC)</option>               
+      <option value=896>Joe Barker (MASC)</option>      
+      <option value=778>Gabryle Bell (MASC)</option>           
+      <option value=689>Amy Broadhurst (MASC)</option>      
+      <option value=688>Beth Broadhurst (MASC)</option>      
+      <option value=916>Alex Brodie (MASC)</option>           
+      <option value=794>Christian Buchanan (MASC)</option>           
+      <option value=716>Morgan Burt (MASC)</option>           
+      <option value=628>Sarah Calder (MASC)</option>      
+      <option value=922>Lucy Calderhead (MASC)</option>           
+      <option value=805>Grace Courtney (MASC)</option>          
+      <option value=919>Emma Darling (MASC)</option>      
+      <option value=816>Carrie Davies (MASC)</option>      
+      <option value=817>Dylan Davies (MASC)</option>      
+      <option value=907>Zac Davies (MASC)</option>           
+      <option value=878>Michael De Luca (MASC)</option>      
+      <option value=860>V. De Sequeira-Tejada (MASC)</option>           
+      <option value=908>Lucas Dobson (MASC)</option>      
+      <option value=848>Emma Docherty (MASC)</option>          
+      <option value=849>Ellie Doolan (MASC)</option>          
+      <option value=834>Rebecca Downie (MASC)</option>      
+      <option value=897>Emily Drylie (MASC)</option>          
+      <option value=898>Rachel Eddie (MASC)</option>      
+      <option value=665>Eleanor Ellis (MASC)</option>          
+      <option value=906>Alice Finlay (MASC)</option>      
+      <option value=809>Emma Finlay (MASC)</option>         
+      <option value=823>Megan Fortune (MASC)</option>           
+      <option value=842>Maja Grochulska (MASC)</option>         
+      <option value=890>Eilidh Hansen (MASC)</option>          
+      <option value=719>Caitlin Heaney (MASC)</option>           
+      <option value=698>Cameron Henderson (MASC)</option>           
+      <option value=644>Mairi Hodge (MASC)</option>      
+      <option value=917>Demi Hornsey (MASC)</option>      
+      <option value=914>Luke Hornsey (MASC)</option>          
+      <option value=810>Daisy Houchin (MASC)</option>      
+      <option value=856>Callum Hunter (MASC)</option>      
+      <option value=924>Zoe Hunter (MASC)</option>            
+      <option value=832>Hannah Lally (MASC)</option>          
+      <option value=799>Bridget Lemasurier (MASC)</option>           
+      <option value=918>Mitchell Levy (MASC)</option>           
+      <option value=888>Emma Livingstone (MASC)</option>      
+      <option value=894>Jenna Lowery (MASC)</option>            
+      <option value=911>Christian Ludik (MASC)</option>           
+      <option value=923>Ava Marko (MASC)</option>      
+      <option value=909>Rihanna Marko (MASC)</option>           
+      <option value=854>India Marshall (MASC)</option>      
+      <option value=710>Claire Martin (MASC)</option>          
+      <option value=920>Annie McCann (MASC)</option>           
+      <option value=841>Isla McKie (MASC)</option>           
+      <option value=868>Kiera McLeod (MASC)</option>          
+      <option value=874>Hamish McNeill (MASC)</option>            
+      <option value=875>Tiana Mihalyi-Czita (MASC)</option>           
+      <option value=749>Kai Murray (MASC)</option>      
+      <option value=771>Martin Murray (MASC)</option>           
+      <option value=910>Ben Naumann (MASC)</option>           
+      <option value=873>Hope Orbegozo (MASC)</option>          
+      <option value=761>Ashley Page (MASC)</option>          
+      <option value=880>Lucy Pearson (MASC)</option>          
+      <option value=902>Kara Porteous (MASC)</option>      
+      <option value=804>Luke Porteous (MASC)</option>      
+      <option value=901>Meagan Porteous (MASC)</option>      
+      <option value=903>Scott Porteous (MASC)</option>            
+      <option value=859>Maja Robertson (MASC)</option>            
+      <option value=869>Aine Sandilands (MASC)</option>      
+      <option value=877>Gabriella Santos (MASC)</option>      
+      <option value=876>Matthew Santos (MASC)</option>          
+      <option value=855>Claire Scott (MASC)</option>      
+      <option value=599>Grant Scott (MASC)</option>          
+      <option value=899>Zach Slater (MASC)</option>           
+      <option value=913>Eilidh Smith (MASC)</option>           
+      <option value=893>Callum Taylor (MASC)</option>      
+      <option value=881>Nicole Taylor (MASC)</option>          
+      <option value=882>G. T-McClymont (MASC)</option>           
+      <option value=892>Connor Thomson (MASC)</option>          
+      <option value=812>Hannah Torrance (MASC)</option>      
+      <option value=783>Matthew Torrance (MASC)</option>            
+      <option value=858>Hannah Wardell (MASC)</option>      
+      <option value=900>Emma Warner (MASC)</option>          
+      <option value=915>Emma Watt (MASC)</option>         
+      <option value=408>Nicole Wilkinson (MASC)</option>          
+      <option value=865>Corran Wilson (MASC)</option>      
+      <option value=807>Iona Wilson (MASC)</option>           
+      <option value=772>Abby Wright (MASC)</option>            
+      <option value=912>Alexander Yuill (MASC)</option>      
+        </optgroup> 
+        
+        <optgroup label="TranentASC">
+     
+      <option value=2318>Kiera Anderson (TASC)</option>      
+      <option value=174>Mitchell Anderson (TASC)</option>           
+      <option value=2300>Katie Anderton (TASC)</option>      
+      <option value=2326>Ross Anderton (TASC)</option>            
+      <option value=2296>Ben Averbuch (TASC)</option>      
+      <option value=2327>Sally Averbuch (TASC)</option>      
+      <option value=2256>Nicole Bain (TASC)</option>          
+      <option value=851>Anna Balfour (TASC)</option>      
+      <option value=1141>Esme Balfour (TASC)</option>           
+      <option value=2275>Sadie Blyth (TASC)</option>           
+      <option value=2340>Findlay Brown (TASC)</option>           
+      <option value=2320>Molly Budgen (TASC)</option>            
+      <option value=2291>Holly Burton (TASC)</option>           
+      <option value=2240>Chrissie Clark (TASC)</option>      
+      <option value=2222>Murray Clark (TASC)</option>      
+      <option value=2290>Stephen Clegg (TASC)</option>           
+      <option value=2259>Ellis Corrigan (TASC)</option>           
+      <option value=2339>Hunter Crooks (TASC)</option>      
+      <option value=1249>Amy Cunningham (TASC)</option>          
+      <option value=1280>Abigail Dall (TASC)</option>          
+      <option value=2246>Abby Davis (TASC)</option>           
+      <option value=2330>Layla Duke (TASC)</option>      
+      <option value=2208>Libby Duke (TASC)</option>         
+      <option value=2341>Megan Fenwick (TASC)</option>      
+      <option value=2364>Rebecca Fenwick (TASC)</option>      
+      <option value=2218>Connor Ferguson (TASC)</option>      
+      <option value=2309>Sophie Ferguson (TASC)</option>           
+      <option value=2249>Ariana Francis (TASC)</option>      
+      <option value=2272>Emberlee Francis (TASC)</option>      
+      <option value=1265>Murray Fraser (TASC)</option>           
+      <option value=2335>Bartosz Gacki (TASC)</option>           
+      <option value=2324>F. Gutenschwager (TASC)</option>           
+      <option value=2220>Ellie Hardie (TASC)</option>      
+      <option value=2342>Madison Hardie (TASC)</option>      
+      <option value=1145>Finlay Hart (TASC)</option>            
+      <option value=2334>Isaac Kechida (TASC)</option>      
+      <option value=2359>Elizabeth Kelly (TASC)</option>           
+      <option value=2366>Sophie Knox (TASC)</option>      
+      <option value=2323>Stefan Krawiec (TASC)</option>      
+      <option value=2351>Zara Krawiec (TASC)</option>          
+      <option value=2353>Lucy Levine (TASC)</option>           
+      <option value=2361>Joe Little (TASC)</option>           
+      <option value=2350>Keira McCartney (TASC)</option>      
+      <option value=2067>Amy McConnachie (TASC)</option>      
+      <option value=2328>Lewis McConnachie (TASC)</option>           
+      <option value=2352>Ruby McLeish (TASC)</option>          
+      <option value=1457>Jenna McMahon (TASC)</option>           
+      <option value=854>Catrina McManus (TASC)</option>      
+      <option value=2304>Grace McManus (TASC)</option>          
+      <option value=2363>Aimee McMillan (TASC)</option>           
+      <option value=2365>Paige Meikle (TASC)</option>      
+      <option value=2198>Craig Mellon (TASC)</option>       
+      <option value=2312>Fergus Miller (TASC)</option>      
+      <option value=2343>Lucy Morrison (TASC)</option>          
+      <option value=2344>Cairn Murray (TASC)</option>         
+      <option value=2362>Harvey Orr (TASC)</option>        
+      <option value=2332>Caitlin Peebles (TASC)</option>      
+      <option value=2297>Calum Peebles (TASC)</option>          
+      <option value=2316>Lucy Pryde (TASC)</option>          
+      <option value=2354>Orla Reavy (TASC)</option>      
+      <option value=2358>Kane Redpath (TASC)</option>      
+      <option value=2315>Bronach Reilly (TASC)</option>      
+      <option value=2329>Emily Rennie (TASC)</option>         
+      <option value=1636>Christen Russell (TASC)</option>      
+      <option value=2239>Emily Russell (TASC)</option>      
+      <option value=2238>Holly Russell (TASC)</option>           
+      <option value=2230>Isla Scott (TASC)</option>           
+      <option value=2234>Eilish Segall (TASC)</option>          
+      <option value=2301>Jessica Stable (TASC)</option>          
+      <option value=2205>Katy Stewart (TASC)</option>      
+      <option value=2212>Megan Stewart (TASC)</option>          
+      <option value=2295>William Suayngam (TASC)</option>      
+      <option value=2273>Andrew Sutherland (TASC)</option>      
+      <option value=2271>Jaime Sutherland (TASC)</option>          
+      <option value=2355>Alex Taylor (TASC)</option>      
+      <option value=2356>Rebecca Taylor (TASC)</option>          
+      <option value=2261>Euan Thornton (TASC)</option>      
+      <option value=2262>Holly Thornton (TASC)</option>           
+      <option value=2268>Sarah Turnbull (TASC)</option>           
+      <option value=2360>Zoe Watson (TASC)</option>        
+      <option value=2281>Aaron Weatherhead (TASC)</option>      
+      <option value=2325>Bruce Weatherhead (TASC)</option>      
+      <option value=2263>Rachel White (TASC)</option>          
+      <option value=2357>Charlotte Wright (TASC)</option>        
+        </optgroup>
+		
+        <optgroup  label="EastLothianSwimTeam">
+        
+      <option value=558>Edward Alsop (ELST)</option>           
+      <option value=1>Mitchell Anderson (ELST)</option>           
+      <option value=2>Anna Balfour (ELST)</option>          
+      <option value=32>Lucy Ballantyne (ELST)</option>          
+      <option value=26>Rosie Berwick (ELST)</option>        
+      <option value=559>Bella Bishop (ELST)</option>          
+      <option value=560>Mia Blair (ELST)</option>          
+      <option value=30>Abbi Brindley (ELST)</option>           
+      <option value=563>Christian Buchanan (ELST)</option>           
+      <option value=569>Morgan Burt (ELST)</option>         
+      <option value=3>Lucy Calderhead (ELST)</option>          
+      <option value=561>Holly Cameron (ELST)</option>         
+      <option value=5>Stephen Clegg (ELST)</option>          
+      <option value=35>Sean Craigmile (ELST)</option>          
+      <option value=7>Murray Fraser (ELST)</option>        
+      <option value=565>Bartek Gacki (ELST)</option>           
+      <option value=8>Finlay Hart (ELST)</option>          
+      <option value=555>Caitlin Heaney (ELST)</option>          
+      <option value=9>Demi Hornsey (ELST)</option>           
+      <option value=556>Bridget Lemasurier (ELST)</option>          
+      <option value=24>Anna Lissaman (ELST)</option>      
+      <option value=17>Eve Lissaman (ELST)</option>           
+      <option value=29>Lucy Lucas (ELST)</option>        
+      <option value=10>Jenna McMahon (ELST)</option>        
+      <option value=11>Catrina McManus (ELST)</option>          
+      <option value=12>Craig Mellon (ELST)</option>          
+      <option value=562>Tavia Middleton (ELST)</option>          
+      <option value=571>Meagan Porteous (ELST)</option>           
+      <option value=13>Christen Russell (ELST)</option>         
+      <option value=22>Fraser Samuel (ELST)</option>          
+      <option value=553>Eilish Segall (ELST)</option>          
+      <option value=15>Charlie Smith (ELST)</option>         
+      <option value=554>Katy Stewart (ELST)</option>           
+      <option value=572>Hugh Taylor (ELST)</option>          
+      <option value=31>Ruth Thomson (ELST)</option>          
+      <option value=570>Matthew Torrance (ELST)</option>           
+      <option value=568>Katie Walker (ELST)</option>         
+      <option value=28>Megan Watt (ELST)</option>         
+      <option value=557>Iona Wilson (ELST)</option>      
+		</optgroup>
+        </select>
+		<h2>CLUB</h2>
+        <input type="text" id="clubId" name="clubId" value="" style="color: #000; font-size:20px; width:250px" >
 
-        <h2>ID NUMBER</h2>
-        <input type="text" name="swimmerid" id="swimmerid" value="1234" style="color: #000; font-size:20px; width:200px">
-        <h2>DISTANCE</h2>
-        <input type="text" name="distance" id="distance" value="100" style="color: #000; font-size:20px; width:200px">
+        <h2> DISTANCE </h2>
+        <select style="font-size:20px; width:200px; color: #000;" id="distance">
+            <option value="25">25m</option>
+			<option value="50">50m</option>
+            <option value="100">100m</option>
+            <option value="200">200m</option>
+            <option value="400">400m</option>
+            <option value="800">800m</option>
+            <option value="1500">1500m</option>
+        </select>		
         <h2>ENTRIES (1=PB)</h2>
         <input type="text" name="list_number" id="list_number" value="1" style="color: #000; font-size:20px; width:200px">
         <h2>POOL LENGTH </h2>
@@ -60,34 +420,40 @@ SELECT A SWIMMER USING THE CLUB NAME AND CLUB ID NUMBER</h2>
     
         <h2>VIEW ALL PB TIMES FOR SELECTED POOL LENGTH</h2>
         <input type="button" style="color: #FFF; font-size:20px; width:200px" value="ALL PB" name="allpbsButton"  onClick="allpbsURL()"><br><br>  
-    </form>
+		
+	</form>
     <br>
 
     <script  type="text/javascript">
 
+		function find(val,idx) {
+			var swimmer = document.getElementById('mySelectID');
+			var getClub = swimmer.options[idx].parentNode.label;
+			document.getElementById("clubId").value = getClub;
+			}
         function flyURL() {
             window.open
-            ("http://www.sports-tek.com/TMOnline/aATHRESULTSWithPSMR.ASP?ATH="+document.myForm.swimmerid.value+"&Stroke=4&Distance="+document.myForm.distance.value+"&Course="+document.querySelector('input[name="poollength"]:checked').value+"&Fastest="+document.myForm.list_number.value+"&MEET=&STD=false&DB="+document.myForm.DB.value, "_blank"); 
+            ("http://www.sports-tek.com/TMOnline/aATHRESULTSWithPSMR.ASP?ATH="+document.myForm.mySelectID.value+"&Stroke=4&Distance="+document.myForm.distance.value+"&Course="+document.querySelector('input[name="poollength"]:checked').value+"&Fastest="+document.myForm.list_number.value+"&MEET=&STD=false&DB=upload%5C"+document.myForm.clubId.value+".mdb", "_blank"); 
             }
         function backURL() {
             window.open
-            ("http://www.sports-tek.com/TMOnline/aATHRESULTSWithPSMR.ASP?ATH="+document.myForm.swimmerid.value+"&Stroke=2&Distance="+document.myForm.distance.value+"&Course="+document.querySelector('input[name="poollength"]:checked').value+"&Fastest="+document.myForm.list_number.value+"&MEET=&STD=false&DB="+document.myForm.DB.value, "_blank"); 
+            ("http://www.sports-tek.com/TMOnline/aATHRESULTSWithPSMR.ASP?ATH="+document.myForm.mySelectID.value+"&Stroke=2&Distance="+document.myForm.distance.value+"&Course="+document.querySelector('input[name="poollength"]:checked').value+"&Fastest="+document.myForm.list_number.value+"&MEET=&STD=false&DB=upload%5C"+document.myForm.clubId.value+".mdb", "_blank"); 
             }
         function breastURL() {
             window.open
-            ("http://www.sports-tek.com/TMOnline/aATHRESULTSWithPSMR.ASP?ATH="+document.myForm.swimmerid.value+"&Stroke=3&Distance="+document.myForm.distance.value+"&Course="+document.querySelector('input[name="poollength"]:checked').value+"&Fastest="+document.myForm.list_number.value+"&MEET=&STD=false&DB="+document.myForm.DB.value, "_blank"); 
+            ("http://www.sports-tek.com/TMOnline/aATHRESULTSWithPSMR.ASP?ATH="+document.myForm.mySelectID.value+"&Stroke=3&Distance="+document.myForm.distance.value+"&Course="+document.querySelector('input[name="poollength"]:checked').value+"&Fastest="+document.myForm.list_number.value+"&MEET=&STD=false&DB=upload%5C"+document.myForm.clubId.value+".mdb", "_blank"); 
             }
         function freeURL() {
             window.open
-            ("http://www.sports-tek.com/TMOnline/aATHRESULTSWithPSMR.ASP?ATH="+document.myForm.swimmerid.value+"&Stroke=1&Distance="+document.myForm.distance.value+"&Course="+document.querySelector('input[name="poollength"]:checked').value+"&Fastest="+document.myForm.list_number.value+"&MEET=&STD=false&DB="+document.myForm.DB.value, "_blank"); 
+            ("http://www.sports-tek.com/TMOnline/aATHRESULTSWithPSMR.ASP?ATH="+document.myForm.mySelectID.value+"&Stroke=1&Distance="+document.myForm.distance.value+"&Course="+document.querySelector('input[name="poollength"]:checked').value+"&Fastest="+document.myForm.list_number.value+"&MEET=&STD=false&DB=upload%5C"+document.myForm.clubId.value+".mdb", "_blank"); 
             }
         function imURL() {
             window.open
-            ("http://www.sports-tek.com/TMOnline/aATHRESULTSWithPSMR.ASP?ATH="+document.myForm.swimmerid.value+"&Stroke=5&Distance="+document.myForm.distance.value+"&Course="+document.querySelector('input[name="poollength"]:checked').value+"&Fastest="+document.myForm.list_number.value+"&MEET=&STD=false&DB="+document.myForm.DB.value, "_blank"); 
+            ("http://www.sports-tek.com/TMOnline/aATHRESULTSWithPSMR.ASP?ATH="+document.myForm.mySelectID.value+"&Stroke=5&Distance="+document.myForm.distance.value+"&Course="+document.querySelector('input[name="poollength"]:checked').value+"&Fastest="+document.myForm.list_number.value+"&MEET=&STD=false&DB=upload%5C"+document.myForm.clubId.value+".mdb", "_blank"); 
             }
         function allpbsURL() {
             window.open
-            ("http://www.sports-tek.com/TMOnline/aATHRESULTSWithPSMR.ASP?ATH="+document.myForm.swimmerid.value+"&Stroke=&Distance="+"&Course="+document.querySelector('input[name="poollength"]:checked').value+"&Fastest=1&MEET=&STD=false&DB="+document.myForm.DB.value, "_blank"); 
+            ("http://www.sports-tek.com/TMOnline/aATHRESULTSWithPSMR.ASP?ATH="+document.myForm.mySelectID.value+"&Stroke=&Distance="+"&Course="+document.querySelector('input[name="poollength"]:checked').value+"&Fastest=1&MEET=&STD=false&DB=upload%5C"+document.myForm.clubId.value+".mdb", "_blank"); 
             }  
   
     </script>
